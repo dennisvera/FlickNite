@@ -1,5 +1,5 @@
 //
-//  DummyViewController.swift
+//  MoviesViewController.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class DummyViewController: UIViewController {
+class MoviesViewController: UIViewController {
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        view.backgroundColor = .systemTeal
     }
-    
 }

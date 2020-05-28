@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,9 @@
 		E1E59459248008630095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59458248008630095143E /* AppDelegate.swift */; };
 		E1E5945B248008630095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5945A248008630095143E /* SceneDelegate.swift */; };
 		E1E59462248008660095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E59461248008660095143E /* Assets.xcassets */; };
-		E1E59492248011BA0095143E /* NowPlatyingCollectionVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59491248011BA0095143E /* NowPlatyingCollectionVIewController.swift */; };
-		E1E59495248014690095143E /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59494248014690095143E /* DummyViewController.swift */; };
+		E1E5949F24804F940095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949E24804F940095143E /* RootViewController.swift */; };
+		E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */; };
+		E1E594B4248061430095143E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B3248061430095143E /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,9 @@
 		E1E59471248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E59476248008660095143E /* FlickNiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickNiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5947C248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E59491248011BA0095143E /* NowPlatyingCollectionVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlatyingCollectionVIewController.swift; sourceTree = "<group>"; };
-		E1E59494248014690095143E /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		E1E5949E24804F940095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewController.swift; sourceTree = "<group>"; };
+		E1E594B3248061430095143E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 			children = (
 				E1E59488248008770095143E /* Appp Delegate */,
 				E1E59489248008830095143E /* Scene Delegate */,
+				E1E5949924804E2E0095143E /* Root View Controller */,
 				E1E59490248010BF0095143E /* Modules */,
 				E1E5948B248008D90095143E /* Resources */,
 				E1E5948C248008F20095143E /* Supporting Files */,
@@ -196,8 +199,8 @@
 		E1E59490248010BF0095143E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E1E59491248011BA0095143E /* NowPlatyingCollectionVIewController.swift */,
-				E1E59494248014690095143E /* DummyViewController.swift */,
+				E1E594A12480506B0095143E /* Now Playing */,
+				E1E594B2248061290095143E /* Movies */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -210,6 +213,30 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		E1E5949924804E2E0095143E /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5949E24804F940095143E /* RootViewController.swift */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		E1E594A12480506B0095143E /* Now Playing */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */,
+			);
+			path = "Now Playing";
+			sourceTree = "<group>";
+		};
+		E1E594B2248061290095143E /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594B3248061430095143E /* MoviesViewController.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
 		EA8D24CC51E49DBBC4A33911 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +247,6 @@
 				2A093342CD90D1638434FCFC /* Pods-FlickNiteTests.debug.xcconfig */,
 				F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -461,10 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E5949F24804F940095143E /* RootViewController.swift in Sources */,
+				E1E594B4248061430095143E /* MoviesViewController.swift in Sources */,
 				E1E59459248008630095143E /* AppDelegate.swift in Sources */,
-				E1E59492248011BA0095143E /* NowPlatyingCollectionVIewController.swift in Sources */,
+				E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */,
 				E1E5945B248008630095143E /* SceneDelegate.swift in Sources */,
-				E1E59495248014690095143E /* DummyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

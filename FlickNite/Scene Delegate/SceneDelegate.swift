@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
          // Configure Window
-        window?.rootViewController = DummyViewController()
+        window?.rootViewController = BaseTabBarController()
         
         // Make Key and Visible
         window?.makeKeyAndVisible()
