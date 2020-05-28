@@ -13,7 +13,7 @@
 		E1E59459248008630095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59458248008630095143E /* AppDelegate.swift */; };
 		E1E5945B248008630095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5945A248008630095143E /* SceneDelegate.swift */; };
 		E1E59462248008660095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E59461248008660095143E /* Assets.xcassets */; };
-		E1E5949F24804F940095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949E24804F940095143E /* RootViewController.swift */; };
+		E1E5949F24804F940095143E /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949E24804F940095143E /* BaseTabBarController.swift */; };
 		E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */; };
 		E1E594B4248061430095143E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B3248061430095143E /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,7 @@
 		E1E59471248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E59476248008660095143E /* FlickNiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickNiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5947C248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E5949E24804F940095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		E1E5949E24804F940095143E /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewController.swift; sourceTree = "<group>"; };
 		E1E594B3248061430095143E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 			children = (
 				E1E59488248008770095143E /* Appp Delegate */,
 				E1E59489248008830095143E /* Scene Delegate */,
-				E1E5949924804E2E0095143E /* Root View Controller */,
+				E1E5949924804E2E0095143E /* Root Tab Bar Controller */,
 				E1E59490248010BF0095143E /* Modules */,
 				E1E5948B248008D90095143E /* Resources */,
 				E1E5948C248008F20095143E /* Supporting Files */,
@@ -213,12 +213,12 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		E1E5949924804E2E0095143E /* Root View Controller */ = {
+		E1E5949924804E2E0095143E /* Root Tab Bar Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E1E5949E24804F940095143E /* RootViewController.swift */,
+				E1E5949E24804F940095143E /* BaseTabBarController.swift */,
 			);
-			path = "Root View Controller";
+			path = "Root Tab Bar Controller";
 			sourceTree = "<group>";
 		};
 		E1E594A12480506B0095143E /* Now Playing */ = {
@@ -487,7 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E5949F24804F940095143E /* RootViewController.swift in Sources */,
+				E1E5949F24804F940095143E /* BaseTabBarController.swift in Sources */,
 				E1E594B4248061430095143E /* MoviesViewController.swift in Sources */,
 				E1E59459248008630095143E /* AppDelegate.swift in Sources */,
 				E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */,
