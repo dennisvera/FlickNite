@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E248BEC16AE70DDC0E9C6EA /* Pods_FlickNite_FlickNiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AB8C79EC9CA17196F1526F /* Pods_FlickNite_FlickNiteUITests.framework */; };
+		680396122E028F443EC6C088 /* Pods_FlickNiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */; };
+		BF5C2B469EF1EC8461727AB5 /* Pods_FlickNite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510DF95009E1D15E301F057C /* Pods_FlickNite.framework */; };
 		E1E59459248008630095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59458248008630095143E /* AppDelegate.swift */; };
 		E1E5945B248008630095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5945A248008630095143E /* SceneDelegate.swift */; };
 		E1E59462248008660095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E59461248008660095143E /* Assets.xcassets */; };
@@ -32,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A093342CD90D1638434FCFC /* Pods-FlickNiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.debug.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B8CF4DBACCEA518ED274F83 /* Pods-FlickNite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite.debug.xcconfig"; path = "Target Support Files/Pods-FlickNite/Pods-FlickNite.debug.xcconfig"; sourceTree = "<group>"; };
+		510DF95009E1D15E301F057C /* Pods_FlickNite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickNite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA9DC2B95FB57782EFE2B86 /* Pods-FlickNite-FlickNiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite-FlickNiteUITests.debug.xcconfig"; path = "Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB8C79EC9CA17196F1526F /* Pods_FlickNite_FlickNiteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickNite_FlickNiteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C35159E8CDBA0FBB1E54335 /* Pods-FlickNite-FlickNiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite-FlickNiteUITests.release.xcconfig"; path = "Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BACDE587F9636CE7E86B5776 /* Pods-FlickNite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite.release.xcconfig"; path = "Target Support Files/Pods-FlickNite/Pods-FlickNite.release.xcconfig"; sourceTree = "<group>"; };
+		C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickNiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59455248008630095143E /* FlickNite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickNite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59458248008630095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E5945A248008630095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +54,7 @@
 		E1E5947C248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E59491248011BA0095143E /* NowPlatyingCollectionVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlatyingCollectionVIewController.swift; sourceTree = "<group>"; };
 		E1E59494248014690095143E /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5C2B469EF1EC8461727AB5 /* Pods_FlickNite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680396122E028F443EC6C088 /* Pods_FlickNiteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +78,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E248BEC16AE70DDC0E9C6EA /* Pods_FlickNite_FlickNiteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64D296D8A1EF8BB343A0D543 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				510DF95009E1D15E301F057C /* Pods_FlickNite.framework */,
+				81AB8C79EC9CA17196F1526F /* Pods_FlickNite_FlickNiteUITests.framework */,
+				C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1E5944C248008630095143E = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +102,8 @@
 				E1E5946E248008660095143E /* FlickNiteTests */,
 				E1E59479248008660095143E /* FlickNiteUITests */,
 				E1E59456248008630095143E /* Products */,
+				EA8D24CC51E49DBBC4A33911 /* Pods */,
+				64D296D8A1EF8BB343A0D543 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +210,20 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		EA8D24CC51E49DBBC4A33911 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B8CF4DBACCEA518ED274F83 /* Pods-FlickNite.debug.xcconfig */,
+				BACDE587F9636CE7E86B5776 /* Pods-FlickNite.release.xcconfig */,
+				5EA9DC2B95FB57782EFE2B86 /* Pods-FlickNite-FlickNiteUITests.debug.xcconfig */,
+				8C35159E8CDBA0FBB1E54335 /* Pods-FlickNite-FlickNiteUITests.release.xcconfig */,
+				2A093342CD90D1638434FCFC /* Pods-FlickNiteTests.debug.xcconfig */,
+				F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E5947F248008660095143E /* Build configuration list for PBXNativeTarget "FlickNite" */;
 			buildPhases = (
+				78441E395CE350F012FD998E /* [CP] Check Pods Manifest.lock */,
 				E1E59451248008630095143E /* Sources */,
 				E1E59452248008630095143E /* Frameworks */,
 				E1E59453248008630095143E /* Resources */,
+				FE8D147954EBF10A639EE8BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E59482248008660095143E /* Build configuration list for PBXNativeTarget "FlickNiteTests" */;
 			buildPhases = (
+				A1F4C95F990F92F4C6F72AF7 /* [CP] Check Pods Manifest.lock */,
 				E1E59467248008660095143E /* Sources */,
 				E1E59468248008660095143E /* Frameworks */,
 				E1E59469248008660095143E /* Resources */,
@@ -225,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E59485248008660095143E /* Build configuration list for PBXNativeTarget "FlickNiteUITests" */;
 			buildPhases = (
+				A908659C9F17F4FCA6BD5BDA /* [CP] Check Pods Manifest.lock */,
 				E1E59472248008660095143E /* Sources */,
 				E1E59473248008660095143E /* Frameworks */,
 				E1E59474248008660095143E /* Resources */,
+				41F8F4C7DEA77C9DFAE6295C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +352,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41F8F4C7DEA77C9DFAE6295C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78441E395CE350F012FD998E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickNite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1F4C95F990F92F4C6F72AF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickNiteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A908659C9F17F4FCA6BD5BDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickNite-FlickNiteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8D147954EBF10A639EE8BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlickNite/Pods-FlickNite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlickNite/Pods-FlickNite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlickNite/Pods-FlickNite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1E59451248008630095143E /* Sources */ = {
@@ -465,6 +614,7 @@
 		};
 		E1E59480248008660095143E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8CF4DBACCEA518ED274F83 /* Pods-FlickNite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,7 +624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CococastsDemo.FlickNite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlickNite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,6 +633,7 @@
 		};
 		E1E59481248008660095143E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BACDE587F9636CE7E86B5776 /* Pods-FlickNite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CococastsDemo.FlickNite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FlickNite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,6 +652,7 @@
 		};
 		E1E59483248008660095143E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A093342CD90D1638434FCFC /* Pods-FlickNiteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +675,7 @@
 		};
 		E1E59484248008660095143E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +698,7 @@
 		};
 		E1E59486248008660095143E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA9DC2B95FB57782EFE2B86 /* Pods-FlickNite-FlickNiteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,6 +719,7 @@
 		};
 		E1E59487248008660095143E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C35159E8CDBA0FBB1E54335 /* Pods-FlickNite-FlickNiteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
