@@ -14,6 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
+    private var appCoordinator = AppCooordinator()
+    
     // MARK: - Application Life Cycle
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -24,10 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         // Configure Window
-        window?.rootViewController = BaseTabBarController()
+        window?.rootViewController = appCoordinator.rootViewController
         
         // Make Key and Visible
         window?.makeKeyAndVisible()
+        
+        // Start Coordinator
+        appCoordinator.start()
         
         // Setup Logging
         Logger.setup()

@@ -10,11 +10,12 @@ import UIKit
 
 class MoviesViewController: UIViewController {
     
+    // MARK: - Initialization
+        
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemTeal
     }
 }

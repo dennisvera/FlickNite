@@ -1,31 +1,26 @@
 //
-//  BaseTabBarController.swift
+//  NowPlayingCoordinator.swift
 //  FlickNite
 //
-//  Created by Dennis Vera on 5/28/20.
+//  Created by Dennis Vera on 5/29/20.
 //  Copyright © 2020 Dennis Vera. All rights reserved.
 //
 
 import UIKit
 
-class BaseTabBarController: UITabBarController {
+class NowPlayingCoordinator: Coordinator {
     
-    // MARK: View Life Cycle
+    // MARK: - Properties
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        createViewControlers()
+    var rootViewController: UIViewController {
+        return nowPlayingController
     }
     
-    //MARK: - Helper Methods
+    private lazy var nowPlayingController = createNavigationController(viewController: NowPlayingCollectionViewController(),
+                                                                       title: "Now Playing",
+                                                                       imageName: "")
     
-    private func createViewControlers() {
-        viewControllers = [
-            createNavigationController(viewController: NowPlayingCollectionViewController(), title: "Now Playing", imageName: ""),
-            createNavigationController(viewController: MoviesViewController(), title: "Movies", imageName: "")
-        ]
-    }
+    // MARK: - Helper Methods
     
     private func createNavigationController(viewController: UIViewController,
                                             title: String,

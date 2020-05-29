@@ -16,12 +16,11 @@ final class Logger {
     // MARK: - Class Methods
     
     class func setup() {
+        // Configure TTY Logger
         guard let loggerSharedInstance = DDTTYLogger.sharedInstance else { return }
-        
-        // Configure os_log Logger
         loggerSharedInstance.logFormatter = LogFormatter()
         
-        // Add os_log Logger
+        // Add TTY Logger
         DDLog.add(loggerSharedInstance, with: defaultLogLevel)
     }
 }

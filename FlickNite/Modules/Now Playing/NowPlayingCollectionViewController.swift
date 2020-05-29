@@ -27,6 +27,7 @@ class NowPlayingCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Now Palying"
         setupCollectionView()
     }
     
@@ -48,7 +49,7 @@ extension NowPlayingCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 300
     }
     
     override func collectionView(_ collectionView: UICollectionView,
