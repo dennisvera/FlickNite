@@ -1,22 +1,28 @@
 PODS:
+  - CocoaLumberjack/Core (3.6.1)
+  - CocoaLumberjack/Swift (3.6.1):
+    - CocoaLumberjack/Core
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - CocoaLumberjack/Swift
   - SDWebImage (~> 5.8.0)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
+    - CocoaLumberjack
     - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: dabd939342787819f47809c517010eff4101d852
+PODFILE CHECKSUM: 8d7ad132171002a4a83b616760f0a9de80e3db6c
 
 COCOAPODS: 1.9.2

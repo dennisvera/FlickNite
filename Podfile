@@ -8,6 +8,9 @@ target 'FlickNite' do
   # SDWebImage
   pod 'SDWebImage', '~> 5.8.0'
 
+  # Debugging
+  pod 'CocoaLumberjack/Swift'
+
   target 'FlickNiteTests' do
     inherit! :search_paths
   end

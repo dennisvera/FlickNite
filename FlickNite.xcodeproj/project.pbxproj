@@ -16,6 +16,8 @@
 		E1E5949F24804F940095143E /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5949E24804F940095143E /* BaseTabBarController.swift */; };
 		E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */; };
 		E1E594B4248061430095143E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B3248061430095143E /* MoviesViewController.swift */; };
+		E1E594BC2480A87D0095143E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BB2480A87D0095143E /* Logger.swift */; };
+		E1E594C02480B1EB0095143E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BF2480B1EB0095143E /* LogFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		E1E5949E24804F940095143E /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewController.swift; sourceTree = "<group>"; };
 		E1E594B3248061430095143E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		E1E594BB2480A87D0095143E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E1E594BF2480B1EB0095143E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +126,7 @@
 		E1E59457248008630095143E /* FlickNite */ = {
 			isa = PBXGroup;
 			children = (
+				E1E594B72480A6990095143E /* Debugging */,
 				E1E59488248008770095143E /* Appp Delegate */,
 				E1E59489248008830095143E /* Scene Delegate */,
 				E1E5949924804E2E0095143E /* Root Tab Bar Controller */,
@@ -235,6 +240,23 @@
 				E1E594B3248061430095143E /* MoviesViewController.swift */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		E1E594B72480A6990095143E /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594B82480A6A30095143E /* Logging */,
+			);
+			path = Debugging;
+			sourceTree = "<group>";
+		};
+		E1E594B82480A6A30095143E /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594BB2480A87D0095143E /* Logger.swift */,
+				E1E594BF2480B1EB0095143E /* LogFormatter.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 		EA8D24CC51E49DBBC4A33911 /* Pods */ = {
@@ -488,7 +510,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E5949F24804F940095143E /* BaseTabBarController.swift in Sources */,
+				E1E594BC2480A87D0095143E /* Logger.swift in Sources */,
 				E1E594B4248061430095143E /* MoviesViewController.swift in Sources */,
+				E1E594C02480B1EB0095143E /* LogFormatter.swift in Sources */,
 				E1E59459248008630095143E /* AppDelegate.swift in Sources */,
 				E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */,
 				E1E5945B248008630095143E /* SceneDelegate.swift in Sources */,
