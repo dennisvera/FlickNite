@@ -9,29 +9,44 @@
 import UIKit
 
 class NowPlayingCoordinator: Coordinator {
+  
+  // MARK: - Properties
+  
+  var rootViewController: UIViewController {
+    return nowPlayingController
+  }
+  
+  private lazy var nowPlayingController = createNavigationController(viewController: nowPlayingCollectionViewController,
+                                                                     title: "Now Playing",
+                                                                     imageName: "")
+  
+  private lazy var nowPlayingCollectionViewController: NowPlayingCollectionViewController = {
+    // Initialize API Client
+    let apiClient = APIClient()
     
-    // MARK: - Properties
+    // Initialize Now Playing View Model
+    let viewModel = NowPlayingViewModel(apiClient: apiClient)
     
-    var rootViewController: UIViewController {
-        return nowPlayingController
-    }
+    // Initialize Now Playing View Controller
+    let nowPlayingViewController = NowPlayingCollectionViewController()
+    // Configure Now Playing View Controller
+    nowPlayingViewController.viewModel = viewModel
     
-    private lazy var nowPlayingController = createNavigationController(viewController: NowPlayingCollectionViewController(),
-                                                                       title: "Now Playing",
-                                                                       imageName: "")
+    return nowPlayingViewController
+  }()
+  
+  // MARK: - Helper Methods
+  
+  private func createNavigationController(viewController: UIViewController,
+                                          title: String,
+                                          imageName: String) -> UIViewController {
+    viewController.navigationItem.title = title
     
-    // MARK: - Helper Methods
+    let navigationController = UINavigationController(rootViewController: viewController)
+    navigationController.tabBarItem.title = title
+    navigationController.tabBarItem.image = UIImage(named: imageName)
+    navigationController.navigationBar.prefersLargeTitles = true
     
-    private func createNavigationController(viewController: UIViewController,
-                                            title: String,
-                                            imageName: String) -> UIViewController {
-        viewController.navigationItem.title = title
-        
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.tabBarItem.title = title
-        navigationController.tabBarItem.image = UIImage(named: imageName)
-        navigationController.navigationBar.prefersLargeTitles = true
-        
-        return navigationController
-    }
+    return navigationController
+  }
 }

@@ -9,29 +9,29 @@
 import UIKit
 
 class MoviesCoordinator: Coordinator {
+  
+  // MARK: - Properties
+  
+  var rootViewController: UIViewController {
+    return moviesViewController
+  }
+  
+  private lazy var moviesViewController = createNavigationController(viewController: MoviesViewController(),
+                                                                     title: "Movies",
+                                                                     imageName: "")
+  
+  // MARK: - Helper Methods
+  
+  private func createNavigationController(viewController: UIViewController,
+                                          title: String,
+                                          imageName: String) -> UIViewController {
+    viewController.navigationItem.title = title
     
-    // MARK: - Properties
+    let navigationController = UINavigationController(rootViewController: viewController)
+    navigationController.tabBarItem.title = title
+    navigationController.tabBarItem.image = UIImage(named: imageName)
+    navigationController.navigationBar.prefersLargeTitles = true
     
-    var rootViewController: UIViewController {
-        return moviesViewController
-    }
-    
-    private lazy var moviesViewController = createNavigationController(viewController: MoviesViewController(),
-                                                                  title: "Movies",
-                                                                  imageName: "")
-    
-    // MARK: - Helper Methods
-    
-    private func createNavigationController(viewController: UIViewController,
-                                            title: String,
-                                            imageName: String) -> UIViewController {
-        viewController.navigationItem.title = title
-        
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.tabBarItem.title = title
-        navigationController.tabBarItem.image = UIImage(named: imageName)
-        navigationController.navigationBar.prefersLargeTitles = true
-        
-        return navigationController
-    }
+    return navigationController
+  }
 }
