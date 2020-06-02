@@ -10,20 +10,20 @@ import UIKit
 import SnapKit
 
 class NowPlayingCollectionViewCell: UICollectionViewCell {
-    
-  // MARK: - Properties
   
-  let titleLabel: UILabel = {
-    let label = UILabel()
-    label.font = .boldSystemFont(ofSize: 20)
-    return label
-  }()
+  // MARK: - Properties
   
   let imageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
     imageView.contentMode = .scaleAspectFill
     return imageView
+  }()
+  
+  let titleLabel: UILabel = {
+    let label = UILabel()
+    label.font = .boldSystemFont(ofSize: 20)
+    return label
   }()
   
   // MARK: - Initialization
@@ -40,12 +40,15 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Helper Methods
   
-  private func setupViews() {
-    backgroundColor = .systemOrange
+  private func setupViews() {    
+    let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel])
+    stackView.axis = .vertical
+    stackView.alignment = .center
+    stackView.spacing = 10
     
-    addSubview(titleLabel)
-    titleLabel.snp.makeConstraints { make in
-      make.centerY.centerX.equalToSuperview()
+    addSubview(stackView)
+    stackView.snp.makeConstraints { make in
+      make.edges.equalToSuperview()
     }
   }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NowPlayingCollectionViewController: UICollectionViewController {
   
@@ -65,6 +66,7 @@ extension NowPlayingCollectionViewController {
     
     // Configure Cell
     cell.titleLabel.text = movies.title
+    cell.imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/" + movies.posterPath.absoluteString))
     
     return cell
   }

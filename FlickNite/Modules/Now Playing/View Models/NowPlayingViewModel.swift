@@ -51,7 +51,7 @@ final class NowPlayingViewModel {
     APIClient().fetchMovies { [weak self] result in
       switch result {
       case .success(let movies):
-        print(movies.results.count)
+        print(movies.results[0].posterPath)
         guard let strongSelf = self else { return }
         strongSelf.movies = movies.results
       case .failure(let error):
