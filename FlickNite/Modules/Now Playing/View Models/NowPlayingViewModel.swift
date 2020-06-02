@@ -21,10 +21,10 @@ final class NowPlayingViewModel {
       }
     }
   }
+    
+   // MARK: - Public API
   
   var moviesDidChange: (() -> Void)?
-  
-  // MARK: - Public Properties
   
   var numberOfMovies: Int {
     return movies.count
@@ -36,12 +36,6 @@ final class NowPlayingViewModel {
     self.apiClient = apiClient
     
     fetchMovies()
-  }
-  
-  // MARK: - Public API
-  
-  func movies(at index: Int) -> Movie {
-    return movies[index]
   }
   
   // MARK: - Helper Methods
@@ -58,5 +52,15 @@ final class NowPlayingViewModel {
         print(error)
       }
     }
+  }
+  
+  private func movies(at index: Int) -> Movie {
+    return movies[index]
+  }
+  
+  // MARK: - Public API
+  
+  func presentabble(for index: Int) -> NowPlayingPresentable {
+    movies(at: index)
   }
 }

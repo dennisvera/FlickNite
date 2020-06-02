@@ -8,19 +8,20 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 class NowPlayingCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Properties
   
-  let imageView: UIImageView = {
+  private let imageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
-    imageView.contentMode = .scaleAspectFill
+    imageView.contentMode = .scaleAspectFit
     return imageView
   }()
   
-  let titleLabel: UILabel = {
+  private let titleLabel: UILabel = {
     let label = UILabel()
     label.font = .boldSystemFont(ofSize: 20)
     return label
@@ -40,7 +41,12 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Helper Methods
   
-  private func setupViews() {    
+  private func setupViews() {
+    addSubview(imageView)
+    imageView.snp.makeConstraints { make in
+      make.height.equalTo(280)
+    }
+    
     let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel])
     stackView.axis = .vertical
     stackView.alignment = .center
@@ -50,5 +56,12 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
     stackView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
     }
+  }
+  
+  // MARK: - Public API
+  
+  func configure(with presentable: NowPlayingPresentable) {
+    imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/" + presentable.posterPath.absoluteString))
+    titleLabel.text = presentable.title
   }
 }

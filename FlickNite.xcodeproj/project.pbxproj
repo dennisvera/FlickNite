@@ -29,6 +29,7 @@
 		E1FF4AEC2485F4B500FF2FD2 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */; };
 		E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */; };
 		E1FF4AF12485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */; };
+		E1FF4AF52486B3CD00FF2FD2 /* NowPlayingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF42486B3CD00FF2FD2 /* NowPlayingPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1FF4AF42486B3CD00FF2FD2 /* NowPlayingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingPresentable.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -352,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */,
+				E1FF4AF42486B3CD00FF2FD2 /* NowPlayingPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E594D8248172160095143E /* RootViewController.swift in Sources */,
+				E1FF4AF52486B3CD00FF2FD2 /* NowPlayingPresentable.swift in Sources */,
 				E1E594C6248157BA0095143E /* Coordinator.swift in Sources */,
 				E1E594BC2480A87D0095143E /* Logger.swift in Sources */,
 				E1E594B4248061430095143E /* MoviesViewController.swift in Sources */,

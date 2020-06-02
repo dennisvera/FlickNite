@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class NowPlayingCollectionViewController: UICollectionViewController {
   
@@ -58,15 +57,14 @@ extension NowPlayingCollectionViewController {
   
   override func collectionView(_ collectionView: UICollectionView,
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    // Fetch Movies
-    guard let movies = viewModel?.movies(at: indexPath.item) else { fatalError("No Movies Available") }
+    // Fetch Presentable
+    guard let presentbale = viewModel?.presentabble(for: indexPath.item) else { fatalError("No Movies Available.") }
     
     // Dequeue Movie Collection View Cell
     let cell: NowPlayingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
     
     // Configure Cell
-    cell.titleLabel.text = movies.title
-    cell.imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/" + movies.posterPath.absoluteString))
+    cell.configure(with: presentbale)
     
     return cell
   }
