@@ -37,12 +37,13 @@ class NowPlayingCollectionViewController: UICollectionViewController {
   
   private func setupCollectionView() {
     // Register Collection View Cell
-    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+    collectionView.register(NowPlayingCollectionViewCell.self,
+                            forCellWithReuseIdentifier: NowPlayingCollectionViewCell.reuseIdentifier)
     collectionView.backgroundColor = .white
   }
 }
 
-// MARK: - CollectionView Data Source
+// MARK: UICollectionViewDataSource
 
 extension NowPlayingCollectionViewController {
   
@@ -51,17 +52,38 @@ extension NowPlayingCollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 300
+    return viewModel?.numberOfMovies ?? 0
   }
   
   override func collectionView(_ collectionView: UICollectionView,
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
-      fatalError("Unable to Deque Cell")
-    }
+    // Fetch Movies
+    guard let movies = viewModel?.movies(at: indexPath.item) else { fatalError("No Movies Available") }
     
-    cell.backgroundColor = .red
+    // Dequeue Movie Collection View Cell
+    let cell: NowPlayingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+    
+    // Configure Cell
+    cell.titleLabel.text = movies.title
     
     return cell
+  }
+}
+
+// MARK: - CollectionViewDelegateFlowLayout
+
+extension NowPlayingCollectionViewController: UICollectionViewDelegateFlowLayout {
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath) -> CGSize {
+    
+    return .init(width: collectionView.bounds.width, height: 340.0)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    let lineSpacing: CGFloat = 20
+    
+    return lineSpacing
   }
 }

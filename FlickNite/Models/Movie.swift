@@ -19,8 +19,13 @@ struct Movie: Codable {
   
   // MARK: - Properties
   
-  public let id: Int
-  public let title: String
-  public let overview: String
-  public let releaseDate: String
+  let id: Int
+  let title: String
+  let overview: String
+  let releaseDate: String
+  let voteAverage: Double
+  let posterPath: URL
+  let video: Bool
+  let voteCount: Int
+  let popularity: Double
 }

@@ -28,11 +28,11 @@ class NowPlayingCoordinator: Coordinator {
     let viewModel = NowPlayingViewModel(apiClient: apiClient)
     
     // Initialize Now Playing View Controller
-    let nowPlayingViewController = NowPlayingCollectionViewController()
+    let nowPlayingController = NowPlayingCollectionViewController()
     // Configure Now Playing View Controller
-    nowPlayingViewController.viewModel = viewModel
+    nowPlayingController.viewModel = viewModel
     
-    return nowPlayingViewController
+    return nowPlayingController
   }()
   
   // MARK: - Helper Methods
@@ -40,6 +40,7 @@ class NowPlayingCoordinator: Coordinator {
   private func createNavigationController(viewController: UIViewController,
                                           title: String,
                                           imageName: String) -> UIViewController {
+    
     viewController.navigationItem.title = title
     
     let navigationController = UINavigationController(rootViewController: viewController)

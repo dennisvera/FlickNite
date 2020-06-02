@@ -25,6 +25,10 @@
 		E1FF4AD02485A27000FF2FD2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */; };
 		E1FF4AD32485A2B400FF2FD2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD22485A2B400FF2FD2 /* Movie.swift */; };
 		E1FF4AD62485A30E00FF2FD2 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */; };
+		E1FF4AE92485F44E00FF2FD2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */; };
+		E1FF4AEC2485F4B500FF2FD2 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */; };
+		E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */; };
+		E1FF4AF12485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		E1FF4AD22485A2B400FF2FD2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
+		E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = ../Extensions/ReusableView.swift; sourceTree = "<group>"; };
+		E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
+		E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
+		E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +155,7 @@
 				E1FF4AD12485A28A00FF2FD2 /* Models */,
 				E1E59490248010BF0095143E /* Modules */,
 				E1E594C4248157AD0095143E /* Coordinator */,
+				E1FF4AEA2485F47800FF2FD2 /* Protocols */,
 				E1E594DE24817D780095143E /* Extensions */,
 				E1E594B72480A6990095143E /* Debugging */,
 				E1E5948B248008D90095143E /* Resources */,
@@ -249,6 +258,7 @@
 			children = (
 				E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */,
 				E1FF4AD42485A2FA00FF2FD2 /* View Models */,
+				E1FF4AEF2485F5B700FF2FD2 /* Collection View Cells */,
 			);
 			path = "Now Playing";
 			sourceTree = "<group>";
@@ -308,6 +318,8 @@
 		E1E594DE24817D780095143E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */,
+				E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +346,22 @@
 				E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E1FF4AEA2485F47800FF2FD2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E1FF4AEF2485F5B700FF2FD2 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */,
+			);
+			path = "Collection View Cells";
 			sourceTree = "<group>";
 		};
 		EA8D24CC51E49DBBC4A33911 /* Pods */ = {
@@ -592,12 +620,16 @@
 				E1E594B4248061430095143E /* MoviesViewController.swift in Sources */,
 				E1FF4AD62485A30E00FF2FD2 /* NowPlayingViewModel.swift in Sources */,
 				E1E594C02480B1EB0095143E /* LogFormatter.swift in Sources */,
+				E1FF4AE92485F44E00FF2FD2 /* ReusableView.swift in Sources */,
 				E1E59459248008630095143E /* AppDelegate.swift in Sources */,
+				E1FF4AF12485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */,
 				E1E594D024815DDB0095143E /* AppCoordinator.swift in Sources */,
 				E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */,
 				E1FF4AD32485A2B400FF2FD2 /* Movie.swift in Sources */,
 				E1E594DD2481737C0095143E /* MoviesCoordinator.swift in Sources */,
+				E1FF4AEC2485F4B500FF2FD2 /* UICollectionView+Helpers.swift in Sources */,
 				E1E5945B248008630095143E /* SceneDelegate.swift in Sources */,
+				E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */,
 				E1FF4AD02485A27000FF2FD2 /* APIClient.swift in Sources */,
 			);
