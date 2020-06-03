@@ -61,7 +61,8 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   // MARK: - Public API
   
   func configure(with presentable: NowPlayingPresentable) {
-    imageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/" + presentable.posterPath.absoluteString))
-    titleLabel.text = presentable.title
+    let imageBaseUrl = "https://image.tmdb.org/t/p/w200/"
+    imageView.sd_setImage(with: URL(string: imageBaseUrl + presentable.posterPath.absoluteString))
+    titleLabel.attributedText = presentable.title.toTtitle(color: UIColor.FlickNite.red)
   }
 }
