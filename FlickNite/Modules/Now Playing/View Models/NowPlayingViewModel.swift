@@ -12,7 +12,7 @@ final class NowPlayingViewModel {
   
   // MARK: - Properties
   
-  private let apiClient: APIClient
+  private let apiClient: FlickNiteAPIClient
   
   private var movies: [Movie] = [] {
     didSet {
@@ -32,7 +32,7 @@ final class NowPlayingViewModel {
   
   // MARK: - Initialization
   
-  init(apiClient: APIClient) {
+  init(apiClient: FlickNiteAPIClient) {
     self.apiClient = apiClient
     
     fetchMovies()
@@ -42,7 +42,7 @@ final class NowPlayingViewModel {
   
   private func fetchMovies() {
     // Fetch Movies
-    APIClient().fetchMovies { [weak self] result in
+    FlickNiteAPIClient().fetchMovies { [weak self] result in
       switch result {
       case .success(let movies):
         print(movies.results[0].posterPath)

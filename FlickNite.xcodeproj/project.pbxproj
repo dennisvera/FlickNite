@@ -22,7 +22,7 @@
 		E1E594D8248172160095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D7248172160095143E /* RootViewController.swift */; };
 		E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DA248173190095143E /* NowPlayingCoordinator.swift */; };
 		E1E594DD2481737C0095143E /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DC2481737C0095143E /* MoviesCoordinator.swift */; };
-		E1FF4AD02485A27000FF2FD2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */; };
+		E1FF4AD02485A27000FF2FD2 /* FlickNiteAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACF2485A27000FF2FD2 /* FlickNiteAPIClient.swift */; };
 		E1FF4AD32485A2B400FF2FD2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD22485A2B400FF2FD2 /* Movie.swift */; };
 		E1FF4AD62485A30E00FF2FD2 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */; };
 		E1FF4AE92485F44E00FF2FD2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */; };
@@ -37,6 +37,9 @@
 		E1FF4B112487F2F000FF2FD2 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B102487F2F000FF2FD2 /* Typography.swift */; };
 		E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B21248816B400FF2FD2 /* APIError.swift */; };
 		E1FF4B24248816E000FF2FD2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */; };
+		E1FF4B302488313700FF2FD2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B2F2488313700FF2FD2 /* APIClient.swift */; };
+		E1FF4B332488319F00FF2FD2 /* NowPlayingMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B322488319F00FF2FD2 /* NowPlayingMovies.json */; };
+		E1FF4B35248831D100FF2FD2 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B34248831D100FF2FD2 /* MockClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +86,7 @@
 		E1E594D7248172160095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E1E594DA248173190095143E /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
 		E1E594DC2481737C0095143E /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
-		E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E1FF4ACF2485A27000FF2FD2 /* FlickNiteAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickNiteAPIClient.swift; sourceTree = "<group>"; };
 		E1FF4AD22485A2B400FF2FD2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
 		E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = ../Extensions/ReusableView.swift; sourceTree = "<group>"; };
@@ -98,6 +101,9 @@
 		E1FF4B102487F2F000FF2FD2 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		E1FF4B21248816B400FF2FD2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		E1FF4B2F2488313700FF2FD2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E1FF4B322488319F00FF2FD2 /* NowPlayingMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NowPlayingMovies.json; sourceTree = "<group>"; };
+		E1FF4B34248831D100FF2FD2 /* MockClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +224,7 @@
 			children = (
 				E1E59493248012930095143E /* Assets */,
 				E1FF4B052487F12900FF2FD2 /* Fonts */,
+				E1FF4B312488317E00FF2FD2 /* Mock API */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,7 +352,6 @@
 		E1FF4ACC2485A22600FF2FD2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4B202488169C00FF2FD2 /* Types */,
 				E1FF4B1F2488169000FF2FD2 /* APIClient */,
 			);
 			path = Networking;
@@ -422,7 +428,9 @@
 		E1FF4B1F2488169000FF2FD2 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */,
+				E1FF4B202488169C00FF2FD2 /* Types */,
+				E1FF4B2E248830F300FF2FD2 /* Client */,
+				E1FF4B2D248830AB00FF2FD2 /* Protocols */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -434,6 +442,31 @@
 				E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		E1FF4B2D248830AB00FF2FD2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B2F2488313700FF2FD2 /* APIClient.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E1FF4B2E248830F300FF2FD2 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B34248831D100FF2FD2 /* MockClient.swift */,
+				E1FF4ACF2485A27000FF2FD2 /* FlickNiteAPIClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		E1FF4B312488317E00FF2FD2 /* Mock API */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B322488319F00FF2FD2 /* NowPlayingMovies.json */,
+			);
+			path = "Mock API";
 			sourceTree = "<group>";
 		};
 		EA8D24CC51E49DBBC4A33911 /* Pods */ = {
@@ -558,6 +591,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FF4B332488319F00FF2FD2 /* NowPlayingMovies.json in Resources */,
 				E1FF4B0A2487F14300FF2FD2 /* Lato-Light.ttf in Resources */,
 				E1E59462248008660095143E /* Assets.xcassets in Resources */,
 				E1FF4B092487F14300FF2FD2 /* Lato-Bold.ttf in Resources */,
@@ -700,6 +734,7 @@
 				E1FF4B112487F2F000FF2FD2 /* Typography.swift in Sources */,
 				E1FF4AE92485F44E00FF2FD2 /* ReusableView.swift in Sources */,
 				E1E59459248008630095143E /* AppDelegate.swift in Sources */,
+				E1FF4B302488313700FF2FD2 /* APIClient.swift in Sources */,
 				E1FF4AF12485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */,
 				E1E594D024815DDB0095143E /* AppCoordinator.swift in Sources */,
 				E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */,
@@ -708,9 +743,10 @@
 				E1E594DD2481737C0095143E /* MoviesCoordinator.swift in Sources */,
 				E1FF4AEC2485F4B500FF2FD2 /* UICollectionView+Helpers.swift in Sources */,
 				E1E5945B248008630095143E /* SceneDelegate.swift in Sources */,
+				E1FF4B35248831D100FF2FD2 /* MockClient.swift in Sources */,
 				E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */,
-				E1FF4AD02485A27000FF2FD2 /* APIClient.swift in Sources */,
+				E1FF4AD02485A27000FF2FD2 /* FlickNiteAPIClient.swift in Sources */,
 				E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

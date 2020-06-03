@@ -1,5 +1,5 @@
 //
-//  APIClient.swift
+//  FlickNiteAPIClient.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 6/1/20.
@@ -9,7 +9,7 @@
 import Foundation
 import CocoaLumberjack
 
-final class APIClient {
+final class FlickNiteAPIClient: APIClient {
   
   // MARK: - Initializer
   
@@ -50,7 +50,7 @@ final class APIClient {
   }
 }
 
-extension APIClient {
+extension FlickNiteAPIClient {
   
   // MARK: - Types
   
