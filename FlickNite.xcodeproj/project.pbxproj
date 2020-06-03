@@ -35,6 +35,8 @@
 		E1FF4B0B2487F14300FF2FD2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B082487F14300FF2FD2 /* Lato-Regular.ttf */; };
 		E1FF4B0F2487F24F00FF2FD2 /* UIColor+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B0E2487F24F00FF2FD2 /* UIColor+Design.swift */; };
 		E1FF4B112487F2F000FF2FD2 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B102487F2F000FF2FD2 /* Typography.swift */; };
+		E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B21248816B400FF2FD2 /* APIError.swift */; };
+		E1FF4B24248816E000FF2FD2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		E1FF4B082487F14300FF2FD2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		E1FF4B0E2487F24F00FF2FD2 /* UIColor+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Design.swift"; sourceTree = "<group>"; };
 		E1FF4B102487F2F000FF2FD2 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		E1FF4B21248816B400FF2FD2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,7 +266,7 @@
 		E1E5949924804E2E0095143E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594D7248172160095143E /* RootViewController.swift */,
+				E1FF4B1E248813F800FF2FD2 /* Root View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -341,7 +345,8 @@
 		E1FF4ACC2485A22600FF2FD2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */,
+				E1FF4B202488169C00FF2FD2 /* Types */,
+				E1FF4B1F2488169000FF2FD2 /* APIClient */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -404,6 +409,31 @@
 				E1FF4B102487F2F000FF2FD2 /* Typography.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		E1FF4B1E248813F800FF2FD2 /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1E594D7248172160095143E /* RootViewController.swift */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		E1FF4B1F2488169000FF2FD2 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4ACF2485A27000FF2FD2 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		E1FF4B202488169C00FF2FD2 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				E1FF4B21248816B400FF2FD2 /* APIError.swift */,
+				E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		EA8D24CC51E49DBBC4A33911 /* Pods */ = {
@@ -661,6 +691,7 @@
 			files = (
 				E1E594D8248172160095143E /* RootViewController.swift in Sources */,
 				E1FF4AF52486B3CD00FF2FD2 /* NowPlayingPresentable.swift in Sources */,
+				E1FF4B24248816E000FF2FD2 /* APIEndpoint.swift in Sources */,
 				E1E594C6248157BA0095143E /* Coordinator.swift in Sources */,
 				E1E594BC2480A87D0095143E /* Logger.swift in Sources */,
 				E1E594B4248061430095143E /* MoviesViewController.swift in Sources */,
@@ -680,6 +711,7 @@
 				E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */,
 				E1FF4AD02485A27000FF2FD2 /* APIClient.swift in Sources */,
+				E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

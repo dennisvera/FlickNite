@@ -11,34 +11,13 @@ import CocoaLumberjack
 
 final class APIClient {
   
-  // MARK: - Types
-  
-  enum APIClientError: Error {
-    case requestFailed
-    case invalidResponse
-  }
-  
-  private enum QueryItem: String {
-    case apiKey = "2631ea46e7edd7894cf3eaee7d263667"
-    case language = "en-US"
-    case page = "1"
-  }
-  
-  private enum Endpoint: String {
-    case now_playing
-    
-    var path: String {
-      return rawValue
-    }
-  }
-  
   // MARK: - Initializer
   
   init() { }
   
   // MARK: - Public API
   
-  func fetchMovies(_ completion: @escaping (Result<MovieResponse, APIClientError>) -> Void) {
+  func fetchMovies(_ completion: @escaping (Result<MovieResponse, APIError>) -> Void) {
     // Create and Initiate Data Task
     URLSession.shared.dataTask(with: request(for: .now_playing)) { (data, response, error) in
       if let data = data {
@@ -69,10 +48,24 @@ final class APIClient {
       }
     }.resume()
   }
+}
+
+extension APIClient {
+  
+  // MARK: - Types
+  
+  private enum QueryItem: String {
+    
+    // MARK: - Cases
+    
+    case apiKey = "2631ea46e7edd7894cf3eaee7d263667"
+    case language = "en-US"
+    case page = "1"
+  }
   
   // MARK: - Helper Methods
   
-  private func request(for endpoint: Endpoint) -> URLRequest {
+  private func request(for endpoint: APIEndpoint) -> URLRequest {
     // Create and Configure URL
     var components = URLComponents()
     components.scheme = "https"
