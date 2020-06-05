@@ -8,24 +8,23 @@
 
 import Foundation
 
-struct MovieResponse: Codable {
+struct MovieResponse: Decodable {
   
   // MARK: - Properties
   
   var results: [Movie]
 }
 
-struct Movie: Codable {
+struct Movie: Decodable {
   
   // MARK: - Properties
   
   let id: Int
   let title: String
+  let video: Bool
   let overview: String
+  let voteCount: Int
+  let posterPath: String?
   let releaseDate: String
   let voteAverage: Double
-  let posterPath: URL
-  let video: Bool
-  let voteCount: Int
-  let popularity: Double
 }

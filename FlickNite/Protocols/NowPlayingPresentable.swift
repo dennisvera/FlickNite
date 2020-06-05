@@ -13,7 +13,7 @@ protocol NowPlayingPresentable {
    // MARK: - Properties
   
   var title: String { get }
-  var posterPath: URL { get }
+  var posterPath: String? { get }
 }
 
 extension Movie: NowPlayingPresentable {}
