@@ -14,6 +14,8 @@ final class NowPlayingViewModel {
   
   private let apiClient: FlickNiteAPIClient
   
+  private var currentPage = 1
+  
   private var movies: [Movie] = [] {
     didSet {
       DispatchQueue.main.async {
@@ -42,7 +44,7 @@ final class NowPlayingViewModel {
   
   private func fetchMovies() {
     // Fetch Movies
-    apiClient.fetchMovies { [weak self] result in
+    apiClient.fetchMovies(page: currentPage) { [weak self] result in
       switch result {
       case .success(let movies):
         guard let strongSelf = self else { return }

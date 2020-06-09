@@ -12,7 +12,9 @@ struct MovieResponse: Decodable {
   
   // MARK: - Properties
   
-  var results: [Movie]
+  let page: Int
+  let results: [Movie]
+  let totalResults: Int
 }
 
 struct Movie: Decodable {
@@ -20,11 +22,11 @@ struct Movie: Decodable {
   // MARK: - Properties
   
   let id: Int
-  let title: String
   let video: Bool
-  let overview: String
+  let title: String
   let voteCount: Int
-  let posterPath: String?
+  let overview: String
   let releaseDate: String
   let voteAverage: Double
+  let posterPath: String?
 }
