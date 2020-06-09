@@ -62,7 +62,7 @@ final class NowPlayingViewModel {
     
     isFetchInProgress = true
     
-    apiClient.fetchMovies(page: currentPage) { [weak self] result in
+    apiClient.fetchMovies(pageIndex: currentPage) { [weak self] result in
       guard let strongSelf = self else { return }
       
       switch result {

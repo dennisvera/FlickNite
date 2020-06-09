@@ -10,6 +10,7 @@
 		5E248BEC16AE70DDC0E9C6EA /* Pods_FlickNite_FlickNiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AB8C79EC9CA17196F1526F /* Pods_FlickNite_FlickNiteUITests.framework */; };
 		680396122E028F443EC6C088 /* Pods_FlickNiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */; };
 		BF5C2B469EF1EC8461727AB5 /* Pods_FlickNite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510DF95009E1D15E301F057C /* Pods_FlickNite.framework */; };
+		E147F51424901DF00034DC77 /* APIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F51324901DF00034DC77 /* APIComponents.swift */; };
 		E1E59459248008630095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59458248008630095143E /* AppDelegate.swift */; };
 		E1E5945B248008630095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5945A248008630095143E /* SceneDelegate.swift */; };
 		E1E59462248008660095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E59461248008660095143E /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		8C35159E8CDBA0FBB1E54335 /* Pods-FlickNite-FlickNiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite-FlickNiteUITests.release.xcconfig"; path = "Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BACDE587F9636CE7E86B5776 /* Pods-FlickNite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite.release.xcconfig"; path = "Target Support Files/Pods-FlickNite/Pods-FlickNite.release.xcconfig"; sourceTree = "<group>"; };
 		C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickNiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E147F51324901DF00034DC77 /* APIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIComponents.swift; sourceTree = "<group>"; };
 		E1E59455248008630095143E /* FlickNite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickNite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59458248008630095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E5945A248008630095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			children = (
 				E1FF4B21248816B400FF2FD2 /* APIError.swift */,
 				E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */,
+				E147F51324901DF00034DC77 /* APIComponents.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
 				E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */,
 				E1FF4AD02485A27000FF2FD2 /* FlickNiteAPIClient.swift in Sources */,
+				E147F51424901DF00034DC77 /* APIComponents.swift in Sources */,
 				E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

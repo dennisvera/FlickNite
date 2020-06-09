@@ -10,5 +10,5 @@ import Foundation
 
 internal protocol APIClient: AnyObject {
   
-  func fetchMovies(page: Int, completion: @escaping (Result<MovieResponse, APIError>) -> Void)
+  func fetchMovies(pageIndex: Int, completion: @escaping (Result<MovieResponse, APIError>) -> Void)
 }
