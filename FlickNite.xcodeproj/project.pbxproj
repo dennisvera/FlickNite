@@ -15,23 +15,23 @@
 		E1E59459248008630095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59458248008630095143E /* AppDelegate.swift */; };
 		E1E5945B248008630095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5945A248008630095143E /* SceneDelegate.swift */; };
 		E1E59462248008660095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E59461248008660095143E /* Assets.xcassets */; };
-		E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */; };
+		E1E594B12480609D0095143E /* MoviesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B02480609D0095143E /* MoviesCollectionViewController.swift */; };
 		E1E594B4248061430095143E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594B3248061430095143E /* FavoritesViewController.swift */; };
 		E1E594BC2480A87D0095143E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BB2480A87D0095143E /* Logger.swift */; };
 		E1E594C02480B1EB0095143E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594BF2480B1EB0095143E /* LogFormatter.swift */; };
 		E1E594C6248157BA0095143E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594C5248157BA0095143E /* Coordinator.swift */; };
 		E1E594D024815DDB0095143E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594CF24815DDB0095143E /* AppCoordinator.swift */; };
 		E1E594D8248172160095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D7248172160095143E /* RootViewController.swift */; };
-		E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DA248173190095143E /* NowPlayingCoordinator.swift */; };
+		E1E594DB248173190095143E /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DA248173190095143E /* MoviesCoordinator.swift */; };
 		E1E594DD2481737C0095143E /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DC2481737C0095143E /* FavoritesCoordinator.swift */; };
 		E1FF4AD02485A27000FF2FD2 /* FlickNiteAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4ACF2485A27000FF2FD2 /* FlickNiteAPIClient.swift */; };
 		E1FF4AD32485A2B400FF2FD2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD22485A2B400FF2FD2 /* Movie.swift */; };
-		E1FF4AD62485A30E00FF2FD2 /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */; };
+		E1FF4AD62485A30E00FF2FD2 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AD52485A30E00FF2FD2 /* MoviesViewModel.swift */; };
 		E1FF4AE92485F44E00FF2FD2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */; };
 		E1FF4AEC2485F4B500FF2FD2 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */; };
 		E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */; };
-		E1FF4AF12485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */; };
-		E1FF4AF52486B3CD00FF2FD2 /* NowPlayingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF42486B3CD00FF2FD2 /* NowPlayingPresentable.swift */; };
+		E1FF4AF12485F5E100FF2FD2 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF02485F5E100FF2FD2 /* MoviesCollectionViewCell.swift */; };
+		E1FF4AF52486B3CD00FF2FD2 /* MoviesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4AF42486B3CD00FF2FD2 /* MoviesPresentable.swift */; };
 		E1FF4B092487F14300FF2FD2 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B062487F14300FF2FD2 /* Lato-Bold.ttf */; };
 		E1FF4B0A2487F14300FF2FD2 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B072487F14300FF2FD2 /* Lato-Light.ttf */; };
 		E1FF4B0B2487F14300FF2FD2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B082487F14300FF2FD2 /* Lato-Regular.ttf */; };
@@ -40,7 +40,7 @@
 		E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B21248816B400FF2FD2 /* APIError.swift */; };
 		E1FF4B24248816E000FF2FD2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */; };
 		E1FF4B302488313700FF2FD2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B2F2488313700FF2FD2 /* APIClient.swift */; };
-		E1FF4B332488319F00FF2FD2 /* NowPlayingMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B322488319F00FF2FD2 /* NowPlayingMovies.json */; };
+		E1FF4B332488319F00FF2FD2 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = E1FF4B322488319F00FF2FD2 /* movies.json */; };
 		E1FF4B35248831D100FF2FD2 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FF4B34248831D100FF2FD2 /* MockClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,23 +81,23 @@
 		E1E59471248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E59476248008660095143E /* FlickNiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickNiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5947C248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewController.swift; sourceTree = "<group>"; };
+		E1E594B02480609D0095143E /* MoviesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewController.swift; sourceTree = "<group>"; };
 		E1E594B3248061430095143E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		E1E594BB2480A87D0095143E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E1E594BF2480B1EB0095143E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		E1E594C5248157BA0095143E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E1E594CF24815DDB0095143E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E1E594D7248172160095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		E1E594DA248173190095143E /* NowPlayingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCoordinator.swift; sourceTree = "<group>"; };
+		E1E594DA248173190095143E /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
 		E1E594DC2481737C0095143E /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		E1FF4ACF2485A27000FF2FD2 /* FlickNiteAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickNiteAPIClient.swift; sourceTree = "<group>"; };
 		E1FF4AD22485A2B400FF2FD2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
+		E1FF4AD52485A30E00FF2FD2 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = ../Extensions/ReusableView.swift; sourceTree = "<group>"; };
 		E1FF4AEB2485F4B500FF2FD2 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Helpers.swift"; sourceTree = "<group>"; };
-		E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
-		E1FF4AF42486B3CD00FF2FD2 /* NowPlayingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingPresentable.swift; sourceTree = "<group>"; };
+		E1FF4AF02485F5E100FF2FD2 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1FF4AF42486B3CD00FF2FD2 /* MoviesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPresentable.swift; sourceTree = "<group>"; };
 		E1FF4B062487F14300FF2FD2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		E1FF4B072487F14300FF2FD2 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		E1FF4B082487F14300FF2FD2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		E1FF4B21248816B400FF2FD2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E1FF4B23248816E000FF2FD2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		E1FF4B2F2488313700FF2FD2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		E1FF4B322488319F00FF2FD2 /* NowPlayingMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NowPlayingMovies.json; sourceTree = "<group>"; };
+		E1FF4B322488319F00FF2FD2 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		E1FF4B34248831D100FF2FD2 /* MockClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
 		F7EF10B209707EAC8A0043AB /* Pods-FlickNiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNiteTests.release.xcconfig"; path = "Target Support Files/Pods-FlickNiteTests/Pods-FlickNiteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,7 +276,7 @@
 		E1E59490248010BF0095143E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594A12480506B0095143E /* Now Playing */,
+				E1E594A12480506B0095143E /* Movies */,
 				E1E594B2248061290095143E /* Favorites */,
 			);
 			path = Modules;
@@ -298,15 +298,15 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		E1E594A12480506B0095143E /* Now Playing */ = {
+		E1E594A12480506B0095143E /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */,
+				E1E594B02480609D0095143E /* MoviesCollectionViewController.swift */,
 				E1FF4AD42485A2FA00FF2FD2 /* View Models */,
 				E1FF4AEF2485F5B700FF2FD2 /* Collection View Cells */,
 				E147F5202491471A0034DC77 /* Movie Detail Controller */,
 			);
-			path = "Now Playing";
+			path = Movies;
 			sourceTree = "<group>";
 		};
 		E1E594B2248061290095143E /* Favorites */ = {
@@ -355,7 +355,7 @@
 		E1E594D9248172F40095143E /* Child Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				E1E594DA248173190095143E /* NowPlayingCoordinator.swift */,
+				E1E594DA248173190095143E /* MoviesCoordinator.swift */,
 				E1E594DC2481737C0095143E /* FavoritesCoordinator.swift */,
 			);
 			path = "Child Coordinators";
@@ -389,7 +389,7 @@
 		E1FF4AD42485A2FA00FF2FD2 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4AD52485A30E00FF2FD2 /* NowPlayingViewModel.swift */,
+				E1FF4AD52485A30E00FF2FD2 /* MoviesViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -398,7 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FF4AE82485F44E00FF2FD2 /* ReusableView.swift */,
-				E1FF4AF42486B3CD00FF2FD2 /* NowPlayingPresentable.swift */,
+				E1FF4AF42486B3CD00FF2FD2 /* MoviesPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -406,7 +406,7 @@
 		E1FF4AEF2485F5B700FF2FD2 /* Collection View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4AF02485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift */,
+				E1FF4AF02485F5E100FF2FD2 /* MoviesCollectionViewCell.swift */,
 			);
 			path = "Collection View Cells";
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 		E1FF4B312488317E00FF2FD2 /* Mock API */ = {
 			isa = PBXGroup;
 			children = (
-				E1FF4B322488319F00FF2FD2 /* NowPlayingMovies.json */,
+				E1FF4B322488319F00FF2FD2 /* movies.json */,
 			);
 			path = "Mock API";
 			sourceTree = "<group>";
@@ -613,7 +613,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1FF4B332488319F00FF2FD2 /* NowPlayingMovies.json in Resources */,
+				E1FF4B332488319F00FF2FD2 /* movies.json in Resources */,
 				E1FF4B0A2487F14300FF2FD2 /* Lato-Light.ttf in Resources */,
 				E1E59462248008660095143E /* Assets.xcassets in Resources */,
 				E1FF4B092487F14300FF2FD2 /* Lato-Bold.ttf in Resources */,
@@ -746,20 +746,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E594D8248172160095143E /* RootViewController.swift in Sources */,
-				E1FF4AF52486B3CD00FF2FD2 /* NowPlayingPresentable.swift in Sources */,
+				E1FF4AF52486B3CD00FF2FD2 /* MoviesPresentable.swift in Sources */,
 				E1FF4B24248816E000FF2FD2 /* APIEndpoint.swift in Sources */,
 				E1E594C6248157BA0095143E /* Coordinator.swift in Sources */,
 				E1E594BC2480A87D0095143E /* Logger.swift in Sources */,
 				E1E594B4248061430095143E /* FavoritesViewController.swift in Sources */,
-				E1FF4AD62485A30E00FF2FD2 /* NowPlayingViewModel.swift in Sources */,
+				E1FF4AD62485A30E00FF2FD2 /* MoviesViewModel.swift in Sources */,
 				E1E594C02480B1EB0095143E /* LogFormatter.swift in Sources */,
 				E1FF4B112487F2F000FF2FD2 /* Typography.swift in Sources */,
 				E1FF4AE92485F44E00FF2FD2 /* ReusableView.swift in Sources */,
 				E1E59459248008630095143E /* AppDelegate.swift in Sources */,
 				E1FF4B302488313700FF2FD2 /* APIClient.swift in Sources */,
-				E1FF4AF12485F5E100FF2FD2 /* NowPlayingCollectionViewCell.swift in Sources */,
+				E1FF4AF12485F5E100FF2FD2 /* MoviesCollectionViewCell.swift in Sources */,
 				E1E594D024815DDB0095143E /* AppCoordinator.swift in Sources */,
-				E1E594B12480609D0095143E /* NowPlayingCollectionViewController.swift in Sources */,
+				E1E594B12480609D0095143E /* MoviesCollectionViewController.swift in Sources */,
 				E1FF4AD32485A2B400FF2FD2 /* Movie.swift in Sources */,
 				E1FF4B0F2487F24F00FF2FD2 /* UIColor+Design.swift in Sources */,
 				E1E594DD2481737C0095143E /* FavoritesCoordinator.swift in Sources */,
@@ -767,7 +767,7 @@
 				E1E5945B248008630095143E /* SceneDelegate.swift in Sources */,
 				E1FF4B35248831D100FF2FD2 /* MockClient.swift in Sources */,
 				E1FF4AEE2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift in Sources */,
-				E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */,
+				E1E594DB248173190095143E /* MoviesCoordinator.swift in Sources */,
 				E1FF4AD02485A27000FF2FD2 /* FlickNiteAPIClient.swift in Sources */,
 				E147F51424901DF00034DC77 /* APIComponents.swift in Sources */,
 				E147F5292491C99E0034DC77 /* MovieDetailViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  NowPlayingCollectionViewCell.swift
+//  MoviesCollectionViewCell.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 6/1/20.
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import SDWebImage
 
-class NowPlayingCollectionViewCell: UICollectionViewCell {
+class MoviesCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Properties
   
@@ -60,7 +60,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
   
   // MARK: - Public API
   
-  func configure(with presentable: NowPlayingPresentable?) {
+  func configure(with presentable: MoviesPresentable?) {
     let imageBaseUrl = "https://image.tmdb.org/t/p/w200/"
     guard let posterPath = presentable?.posterPath else { return }
     imageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))

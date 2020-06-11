@@ -1,5 +1,5 @@
 //
-//  NowPlayingViewModel.swift
+//  MoviesViewModel.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 6/1/20.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-protocol NowPlayingViewModelDelegate: class {
+protocol MoviesViewModelDelegate: class {
   
   func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
   func onFetchFailed(with reason: String)
 }
 
-final class NowPlayingViewModel {
+final class MoviesViewModel {
   
   // MARK: - Properties
   
-  var delegate: NowPlayingViewModelDelegate?
+  var delegate: MoviesViewModelDelegate?
   
   private let apiClient: FlickNiteAPIClient
   
@@ -110,7 +110,7 @@ final class NowPlayingViewModel {
   // BUG: - the presentable func crashes the app when called on the cell for row at.
   // This started happening after the prefetching implementation.
   
-  //  func presentable(for index: Int) -> NowPlayingPresentable {
+  //  func presentable(for index: Int) -> MoviesPresentable {
   //    return movies(at: index)
   //  }
 }

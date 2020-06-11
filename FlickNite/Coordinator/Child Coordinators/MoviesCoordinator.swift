@@ -1,5 +1,5 @@
 //
-//  NowPlayingCoordinator.swift
+//  MoviesCoordinator.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 5/29/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NowPlayingCoordinator: Coordinator {
+class MoviesCoordinator: Coordinator {
   
   // MARK: - Properties
   
@@ -55,12 +55,12 @@ class NowPlayingCoordinator: Coordinator {
     let apiClient = FlickNiteAPIClient()
     
     // Initialize Now Playing View Model
-    let viewModel = NowPlayingViewModel(apiClient: apiClient)
+    let viewModel = MoviesViewModel(apiClient: apiClient)
     
     // Initialize Now Playing View Controller
-    let nowPlayingViewController = NowPlayingCollectionViewController()
+    let moviesCollectionViewController = MoviesCollectionViewController()
     // Configure Now Playing View Controller
-    nowPlayingViewController.viewModel = viewModel
+    moviesCollectionViewController.viewModel = viewModel
     
     // Install Handlers
     viewModel.didSelectMovie = { [weak self] movie in
@@ -69,7 +69,7 @@ class NowPlayingCoordinator: Coordinator {
     }
     
     // Push Movies Collection View Controller Onto Navigation Stack
-    navigationController.pushViewController(nowPlayingViewController, animated: true)
+    navigationController.pushViewController(moviesCollectionViewController, animated: true)
   }
   
   private func showMovie(_ movie: Movie) {

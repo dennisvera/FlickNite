@@ -20,7 +20,7 @@ final class MockClient: APIClient {
   
   func fetchMovies(pageIndex: Int, completion: @escaping (Result<MovieResponse, APIError>) -> Void) {
     // Find Mock Response
-    guard let url = Bundle.main.url(forResource: "NowPlayingMovies", withExtension: "json") else {
+    guard let url = Bundle.main.url(forResource: "movies", withExtension: "json") else {
       fatalError("Unable to Find Mock Response")
     }
     

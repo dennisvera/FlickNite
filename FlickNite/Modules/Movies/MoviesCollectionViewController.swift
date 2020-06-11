@@ -1,5 +1,5 @@
 //
-//  NowPlayingCollectionViewController.swift
+//  MoviesCollectionViewController.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class NowPlayingCollectionViewController: UICollectionViewController {
+class MoviesCollectionViewController: UICollectionViewController {
   
   // MARK: - Properties
   
-  var viewModel: NowPlayingViewModel?
+  var viewModel: MoviesViewModel?
   
   // MARK: - Initialization
   
@@ -45,8 +45,8 @@ class NowPlayingCollectionViewController: UICollectionViewController {
     collectionView.backgroundColor = .white
     
     // Register Collection View Cell
-    collectionView.register(NowPlayingCollectionViewCell.self,
-                            forCellWithReuseIdentifier: NowPlayingCollectionViewCell.reuseIdentifier)
+    collectionView.register(MoviesCollectionViewCell.self,
+                            forCellWithReuseIdentifier: MoviesCollectionViewCell.reuseIdentifier)
   }
   
   private func setupViewModel() {
@@ -63,7 +63,7 @@ class NowPlayingCollectionViewController: UICollectionViewController {
 
 // MARK: UICollectionViewDataSource
 
-extension NowPlayingCollectionViewController {
+extension MoviesCollectionViewController {
   
   override func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
@@ -81,7 +81,7 @@ extension NowPlayingCollectionViewController {
     //    guard let presentable = viewModel?.presentable(for: indexPath.item) else { fatalError("No Movies Available.") }
     
     // Dequeue Movie Collection View Cell
-    let cell: NowPlayingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+    let cell: MoviesCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
     
     if isLoadingCell(for: indexPath) {
       cell.configure(with: .none)
@@ -101,7 +101,7 @@ extension NowPlayingCollectionViewController {
 
 // MARK: - CollectionViewDelegateFlowLayout
 
-extension NowPlayingCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
@@ -119,7 +119,7 @@ extension NowPlayingCollectionViewController: UICollectionViewDelegateFlowLayout
   }
 }
 
-extension NowPlayingCollectionViewController: NowPlayingViewModelDelegate {
+extension MoviesCollectionViewController: MoviesViewModelDelegate {
   
   func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
     guard let newIndexPathsToReload = newIndexPathsToReload else {
@@ -136,7 +136,7 @@ extension NowPlayingCollectionViewController: NowPlayingViewModelDelegate {
   }
 }
 
-extension NowPlayingCollectionViewController: UICollectionViewDataSourcePrefetching {
+extension MoviesCollectionViewController: UICollectionViewDataSourcePrefetching {
   
   func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
     if indexPaths.contains(where: isLoadingCell) {
@@ -145,7 +145,7 @@ extension NowPlayingCollectionViewController: UICollectionViewDataSourcePrefetch
   }
 }
 
-private extension NowPlayingCollectionViewController {
+private extension MoviesCollectionViewController {
   
   func isLoadingCell(for indexPath: IndexPath) -> Bool {
     return indexPath.row >= viewModel?.currentCount ?? 0
