@@ -1,5 +1,5 @@
 //
-//  MoviesViewController.swift
+//  FavoritesViewController.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 5/28/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class FavoritesViewController: UIViewController {
     
     // MARK: - Initialization
         

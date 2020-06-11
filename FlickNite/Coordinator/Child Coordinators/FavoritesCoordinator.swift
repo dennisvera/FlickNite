@@ -1,5 +1,5 @@
 //
-//  MoviesCoordinator.swift
+//  FavoritesCoordinator.swift
 //  FlickNite
 //
 //  Created by Dennis Vera on 5/29/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesCoordinator: Coordinator {
+class FavoritesCoordinator: Coordinator {
   
   // MARK: - Properties
   
@@ -16,8 +16,8 @@ class MoviesCoordinator: Coordinator {
     return moviesViewController
   }
   
-  private lazy var moviesViewController = createNavigationController(viewController: MoviesViewController(),
-                                                                     title: "Movies",
+  private lazy var moviesViewController = createNavigationController(viewController: FavoritesViewController(),
+                                                                     title: "Favorites",
                                                                      imageName: "")
   
   // MARK: - Helper Methods

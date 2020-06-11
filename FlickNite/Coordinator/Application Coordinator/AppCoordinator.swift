@@ -25,17 +25,17 @@ class AppCoordinator: Coordinator {
     
     // Initialize Child Coordinators
     let nowPlayingCoordinator = NowPlayingCoordinator()
-    let moviesCoordinator = MoviesCoordinator()
+    let favoritesCoordinator = FavoritesCoordinator()
     
     // Update View Controllers
     tabBarController.viewControllers = [
       nowPlayingCoordinator.rootViewController,
-      moviesCoordinator.rootViewController
+      favoritesCoordinator.rootViewController
     ]
     
     // Append to Child Coordinators
     childCoordinators.append(nowPlayingCoordinator)
-    childCoordinators.append(moviesCoordinator)
+    childCoordinators.append(favoritesCoordinator)
   }
   
   // MARK: - Overrides
