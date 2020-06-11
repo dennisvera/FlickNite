@@ -12,15 +12,45 @@ class NowPlayingCoordinator: Coordinator {
   
   // MARK: - Properties
   
+  private let navigationController = UINavigationController()
+  
+  // MARK: - Public API
+  
   var rootViewController: UIViewController {
-    return nowPlayingController
+    return navigationController
   }
   
-  private lazy var nowPlayingController = createNavigationController(viewController: nowPlayingCollectionViewController,
-                                                                     title: "Now Playing",
-                                                                     imageName: "")
+  // MARK: - Overrides
   
-  private lazy var nowPlayingCollectionViewController: NowPlayingCollectionViewController = {
+  override func start() {
+    // Set Navigation Controller Delegate
+    navigationController.delegate = self
+    
+    // Show Movies
+    showMovies()
+  }
+  
+  // MARK: -
+  
+  override func navigationController(_ navigationController: UINavigationController,
+                                     willShow viewController: UIViewController,
+                                     animated: Bool) {
+    childCoordinators.forEach { (childCoordinator) in
+      childCoordinator.navigationController(navigationController, willShow: viewController, animated: animated)
+    }
+  }
+  
+  override func navigationController(_ navigationController: UINavigationController,
+                                     didShow viewController: UIViewController,
+                                     animated: Bool) {
+    childCoordinators.forEach { (childCoordinator) in
+      childCoordinator.navigationController(navigationController, didShow: viewController, animated: animated)
+    }
+  }
+  
+  // MARK: - Helper Methods
+  
+  private func showMovies() {
     // Initialize API Client
     let apiClient = FlickNiteAPIClient()
     
@@ -28,26 +58,28 @@ class NowPlayingCoordinator: Coordinator {
     let viewModel = NowPlayingViewModel(apiClient: apiClient)
     
     // Initialize Now Playing View Controller
-    let nowPlayingController = NowPlayingCollectionViewController()
+    let nowPlayingViewController = NowPlayingCollectionViewController()
     // Configure Now Playing View Controller
-    nowPlayingController.viewModel = viewModel
+    nowPlayingViewController.viewModel = viewModel
     
-    return nowPlayingController
-  }()
+    // Install Handlers
+    viewModel.didSelectMovie = { [weak self] movie in
+      guard let strongSelf = self else { return }
+      strongSelf.showMovie(movie)
+    }
+    
+    // Push Movies Collection View Controller Onto Navigation Stack
+    navigationController.pushViewController(nowPlayingViewController, animated: true)
+  }
   
-  // MARK: - Helper Methods
-  
-  private func createNavigationController(viewController: UIViewController,
-                                          title: String,
-                                          imageName: String) -> UIViewController {
+  private func showMovie(_ movie: Movie) {
+    // Initialize Movie Detail View Controller
+    let movieDetailViewController = MovieDetailViewController()
     
-    viewController.navigationItem.title = title
+    // Configure Movie Detail View Controller
+    movieDetailViewController.movie = movie
     
-    let navigationController = UINavigationController(rootViewController: viewController)
-    navigationController.tabBarItem.title = title
-    navigationController.tabBarItem.image = UIImage(named: imageName)
-    navigationController.navigationBar.prefersLargeTitles = true
-    
-    return navigationController
+    // Push Movie Detail View Controller Onto Navigation Stack
+    navigationController.pushViewController(movieDetailViewController, animated: true)
   }
 }

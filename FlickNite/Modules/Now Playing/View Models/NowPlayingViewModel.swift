@@ -33,9 +33,7 @@ final class NowPlayingViewModel {
       }
     }
   }
-  // MARK: - Public API
-  
-  var moviesDidChange: (() -> Void)?
+  // MARK: - Public Properties
   
   var currentCount: Int {
     return movies.count
@@ -44,6 +42,9 @@ final class NowPlayingViewModel {
   var totalCount: Int {
     return total
   }
+  
+  var moviesDidChange: (() -> Void)?
+  var didSelectMovie: ((Movie) -> Void)?
   
   // MARK: - Initialization
   
@@ -54,6 +55,14 @@ final class NowPlayingViewModel {
   }
   
   // MARK: - Helper Methods
+  
+  private func calculateIndexPathsToReload(from newMovies: [Movie]) -> [IndexPath] {
+    let startIndex = movies.count - newMovies.count
+    let endIndex = startIndex + newMovies.count
+    return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+  }
+  
+  // MARK: - Public API
   
   func fetchMovies() {
     guard !isFetchInProgress else {
@@ -90,16 +99,12 @@ final class NowPlayingViewModel {
     }
   }
   
-  private func calculateIndexPathsToReload(from newMovies: [Movie]) -> [IndexPath] {
-    let startIndex = movies.count - newMovies.count
-    let endIndex = startIndex + newMovies.count
-    return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
-  }
-  
-  // MARK: - Public API
-  
   func movies(at index: Int) -> Movie {
     return movies[index]
+  }
+  
+  func selectMovie(at index: Int) {
+    didSelectMovie?(movies[index])
   }
   
   // BUG: - the presentable func crashes the app when called on the cell for row at.

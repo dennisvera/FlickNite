@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    private var appCoordinator = AppCooordinator()
+    private var appCoordinator = AppCoordinator()
     
     // MARK: - Application Life Cycle
     

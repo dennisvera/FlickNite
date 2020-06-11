@@ -11,6 +11,7 @@
 		680396122E028F443EC6C088 /* Pods_FlickNiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */; };
 		BF5C2B469EF1EC8461727AB5 /* Pods_FlickNite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510DF95009E1D15E301F057C /* Pods_FlickNite.framework */; };
 		E147F51424901DF00034DC77 /* APIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F51324901DF00034DC77 /* APIComponents.swift */; };
+		E147F5292491C99E0034DC77 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F5282491C99E0034DC77 /* MovieDetailViewController.swift */; };
 		E1E59459248008630095143E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E59458248008630095143E /* AppDelegate.swift */; };
 		E1E5945B248008630095143E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5945A248008630095143E /* SceneDelegate.swift */; };
 		E1E59462248008660095143E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E59461248008660095143E /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		BACDE587F9636CE7E86B5776 /* Pods-FlickNite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickNite.release.xcconfig"; path = "Target Support Files/Pods-FlickNite/Pods-FlickNite.release.xcconfig"; sourceTree = "<group>"; };
 		C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickNiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147F51324901DF00034DC77 /* APIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIComponents.swift; sourceTree = "<group>"; };
+		E147F5282491C99E0034DC77 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		E1E59455248008630095143E /* FlickNite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickNite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59458248008630095143E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E5945A248008630095143E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,22 @@
 				C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E147F5202491471A0034DC77 /* Movie Detail Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E147F5272491C9840034DC77 /* View Conttollers */,
+			);
+			path = "Movie Detail Controller";
+			sourceTree = "<group>";
+		};
+		E147F5272491C9840034DC77 /* View Conttollers */ = {
+			isa = PBXGroup;
+			children = (
+				E147F5282491C99E0034DC77 /* MovieDetailViewController.swift */,
+			);
+			path = "View Conttollers";
 			sourceTree = "<group>";
 		};
 		E1E5944C248008630095143E = {
@@ -286,6 +304,7 @@
 				E1E594B02480609D0095143E /* NowPlayingCollectionViewController.swift */,
 				E1FF4AD42485A2FA00FF2FD2 /* View Models */,
 				E1FF4AEF2485F5B700FF2FD2 /* Collection View Cells */,
+				E147F5202491471A0034DC77 /* Movie Detail Controller */,
 			);
 			path = "Now Playing";
 			sourceTree = "<group>";
@@ -751,6 +770,7 @@
 				E1E594DB248173190095143E /* NowPlayingCoordinator.swift in Sources */,
 				E1FF4AD02485A27000FF2FD2 /* FlickNiteAPIClient.swift in Sources */,
 				E147F51424901DF00034DC77 /* APIComponents.swift in Sources */,
+				E147F5292491C99E0034DC77 /* MovieDetailViewController.swift in Sources */,
 				E1FF4B22248816B400FF2FD2 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

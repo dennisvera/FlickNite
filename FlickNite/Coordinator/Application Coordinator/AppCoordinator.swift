@@ -8,42 +8,42 @@
 
 import UIKit
 
-class AppCooordinator: Coordinator {
+class AppCoordinator: Coordinator {
+  
+  // MARK: - Properties
+  
+  var rootViewController: UIViewController {
+    return tabBarController
+  }
+  
+  private let tabBarController = UITabBarController()
+  
+  // MARK: - Initialization
+  
+  override init() {
+    super.init()
     
-    // MARK: - Properties
+    // Initialize Child Coordinators
+    let nowPlayingCoordinator = NowPlayingCoordinator()
+    let moviesCoordinator = MoviesCoordinator()
     
-    lazy var rootViewController = RootViewController()
+    // Update View Controllers
+    tabBarController.viewControllers = [
+      nowPlayingCoordinator.rootViewController,
+      moviesCoordinator.rootViewController
+    ]
     
-    private lazy var tabBarController: UITabBarController = {
-        // Initialize Tab Bar Controller
-        let tabBarController = UITabBarController()
-        
-        // Initialize Child Coordinators
-        let nowPlayingCoordinator = NowPlayingCoordinator()
-        let moviesCoordinator = MoviesCoordinator()
-        
-        // Update View Controllers
-        tabBarController.viewControllers = [
-            nowPlayingCoordinator.rootViewController,
-            moviesCoordinator.rootViewController
-        ]
-        
-        // Append to Child Coordinators
-        childCoordinators.append(nowPlayingCoordinator)
-        childCoordinators.append(moviesCoordinator)
-        
-        return tabBarController
-    }()
-    
-    // MARK: - Overrides
-    
-    override func start() {
-        // Set Child View Controller
-        rootViewController.childViewController = tabBarController
-        
-        // Start Child Coordinators
-        childCoordinators.forEach { childCoordinators in
-            childCoordinators.start()
-        }
+    // Append to Child Coordinators
+    childCoordinators.append(nowPlayingCoordinator)
+    childCoordinators.append(moviesCoordinator)
+  }
+  
+  // MARK: - Overrides
+  
+  override func start() {
+    childCoordinators.forEach { (childCoordinator) in
+      // Start Child Coordinator
+      childCoordinator.start()
     }
+  }
 }

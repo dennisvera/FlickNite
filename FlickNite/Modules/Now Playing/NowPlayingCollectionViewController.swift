@@ -92,6 +92,11 @@ extension NowPlayingCollectionViewController {
     
     return cell
   }
+  
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    // Notify View Model
+    viewModel?.selectMovie(at: indexPath.item)
+  }
 }
 
 // MARK: - CollectionViewDelegateFlowLayout
