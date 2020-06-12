@@ -12,6 +12,8 @@ class MoviesCollectionViewController: UICollectionViewController {
   
   // MARK: - Properties
   
+  private var numberOfItemsInRow = 2
+  private var minimumSpacing: CGFloat = 5
   var viewModel: MoviesViewModel?
   
   // MARK: - Initialization
@@ -40,10 +42,10 @@ class MoviesCollectionViewController: UICollectionViewController {
   
   private func setupCollectionView() {
     // Configure Collection View
+    collectionView.backgroundColor = .white
     collectionView.prefetchDataSource = self
     collectionView.isPrefetchingEnabled = true
-    collectionView.backgroundColor = .white
-    
+
     // Register Collection View Cell
     collectionView.register(MoviesCollectionViewCell.self,
                             forCellWithReuseIdentifier: MoviesCollectionViewCell.reuseIdentifier)
@@ -106,16 +108,27 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    return .init(width: collectionView.bounds.width, height: 340.0)
+    let width = (Int(view.frame.width) - (numberOfItemsInRow - 1) * 5 - 20) / numberOfItemsInRow
+    return CGSize(width: width, height: 280)
   }
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    let lineSpacing: CGFloat = 20
+    return minimumSpacing
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    return minimumSpacing
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      insetForSectionAt section: Int) -> UIEdgeInsets {
     
-    return lineSpacing
+    return .init(top: 10, left: 10, bottom: 10, right: 10)
   }
 }
 
