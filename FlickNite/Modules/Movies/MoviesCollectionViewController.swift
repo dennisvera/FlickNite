@@ -127,8 +127,7 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       insetForSectionAt section: Int) -> UIEdgeInsets {
-    
-    return .init(top: 10, left: 10, bottom: 10, right: 10)
+    return .init(top: 23, left: 16, bottom: 10, right: 16)
   }
 }
 
