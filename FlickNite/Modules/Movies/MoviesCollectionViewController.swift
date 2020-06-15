@@ -12,9 +12,10 @@ class MoviesCollectionViewController: UICollectionViewController {
   
   // MARK: - Properties
   
-  private var minimumSpacing: CGFloat = 8
+  private let viewTitle = "Movies"
+  private let minimumSpacing: CGFloat = 8
   private let spacingBetweenCells: CGFloat = 8
-  private var numberOfItemsPerRow: CGFloat = 2
+  private let numberOfItemsPerRow: CGFloat = 2
   
   var viewModel: MoviesViewModel?
   
@@ -42,7 +43,7 @@ class MoviesCollectionViewController: UICollectionViewController {
     super.viewWillAppear(animated)
     
     // Set Navigation Bar Title
-    navigationItem.title = "Movies"
+    navigationItem.title = viewTitle
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -68,7 +69,7 @@ class MoviesCollectionViewController: UICollectionViewController {
   
   private func setupTabAndNavigationBar() {
     // Set Tab Bar Title
-    title = "Movies"
+    title = viewTitle
     
     // Configure Tab Bar Controller
     tabBarController?.tabBar.tintColor = .white
@@ -139,7 +140,7 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-    //Amount of total spacing in a row
+    // Set the Total Spacing In a Row
     let totalSpacing = (2 * minimumSpacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
     
     if let collection = self.collectionView {

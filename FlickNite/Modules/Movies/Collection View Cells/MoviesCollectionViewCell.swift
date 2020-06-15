@@ -50,6 +50,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
   // MARK: - Public API
   
   func configure(with presentable: MoviesPresentable?) {
+    // Configure Image View
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     guard let posterPath = presentable?.posterPath else { return }
     guard let url = URL(string: imageBaseUrl + posterPath) else { return }
