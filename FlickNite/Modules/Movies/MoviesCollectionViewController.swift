@@ -33,12 +33,23 @@ class MoviesCollectionViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Set Title
-    title = "Now Palying"
-    
     setupViewModel()
     setupCollectionView()
     setupTabAndNavigationBar()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Set Navigation Bar Title
+    navigationItem.title = "Movies"
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    
+    // Remove Navigation Bar Back Button Title
+    self.navigationItem.title = ""
   }
   
   // MARK: - Helper Methods
@@ -56,9 +67,15 @@ class MoviesCollectionViewController: UICollectionViewController {
   }
   
   private func setupTabAndNavigationBar() {
+    // Set Tab Bar Title
+    title = "Movies"
+    
+    // Configure Tab Bar Controller
     tabBarController?.tabBar.tintColor = .white
     tabBarController?.tabBar.barTintColor = UIColor.FlickNite.lightGray
     
+    // Configure Navigation Bar
+    navigationController?.navigationBar.prefersLargeTitles = true
     navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
   }

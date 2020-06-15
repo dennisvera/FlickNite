@@ -33,18 +33,26 @@ final class MovieDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = movie?.title
-    view.backgroundColor = .white
     setupViews()
+    setupNavigationBar()
   }
   
   // MARK: - Helper Methods
   
+  private func setupNavigationBar() {
+    // Set Title
+    title = movie?.title
+    
+    navigationItem.largeTitleDisplayMode = .never
+    navigationController?.navigationBar.tintColor = .white
+  }
+  
   private func setupViews() {
+    view.backgroundColor = UIColor.FlickNite.darkGray
+    
     view.addSubview(moviePosterImageView)
     moviePosterImageView.snp.makeConstraints { make in
-      make.centerY.centerX.equalToSuperview()
-      make.height.width.equalTo(400)
+      make.edges.equalToSuperview()
     }
     
     // Configure Image View
