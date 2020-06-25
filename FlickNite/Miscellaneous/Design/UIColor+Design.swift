@@ -15,9 +15,13 @@ extension UIColor {
   enum FlickNite {
     
     // MARK: - Properties
+        
+    static let white = UIColor(named: "white")!
+
+    static let lightGray = UIColor(named: "lightGray")!
+    static let mediumGray = UIColor(named: "mediumGray")!
+    static let darkGray = UIColor(named: "darkGray")!
     
     static let red = UIColor(named: "red")!
-    static let darkGray = UIColor(named: "darkGray")!
-    static let lightGray = UIColor(named: "lightGray")!
   }
 }

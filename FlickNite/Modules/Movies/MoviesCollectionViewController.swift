@@ -72,14 +72,14 @@ class MoviesCollectionViewController: UICollectionViewController {
     title = viewTitle
     
     // Configure Tab Bar Controller
-    tabBarController?.tabBar.tintColor = .white
-    tabBarController?.tabBar.barTintColor = UIColor.FlickNite.lightGray
+    tabBarController?.tabBar.tintColor = UIColor.FlickNite.white
+    tabBarController?.tabBar.barTintColor = UIColor.FlickNite.mediumGray
     
     // Configure Navigation Bar
     navigationController?.navigationBar.barStyle = .black
-    navigationController?.navigationBar.prefersLargeTitles = true
-    navigationController?.navigationBar.barTintColor = UIColor.FlickNite.lightGray
-    navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+    navigationController?.navigationBar.prefersLargeTitles = false
+    navigationController?.navigationBar.barTintColor = UIColor.FlickNite.mediumGray
+    navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.FlickNite.white]
   }
   
   private func setupViewModel() {

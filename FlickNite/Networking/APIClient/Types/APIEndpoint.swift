@@ -2,21 +2,66 @@
 //  APIEndpoint.swift
 //  FlickNite
 //
-//  Created by Dennis Vera on 6/3/20.
+//  Created by Dennis Vera on 6/9/20.
 //  Copyright © 2020 Dennis Vera. All rights reserved.
 //
 
 import Foundation
 
-internal enum APIEndpoint: String {
+// MARK: - Types
+
+private enum QueryItem: String {
   
   // MARK: - Cases
   
-  case now_playing
+  case apiKey = "2631ea46e7edd7894cf3eaee7d263667"
+  case language = "en-US"
+}
+
+enum APIEndpoint {
   
-  // MARK: - Properties
+  // MARK: - Cases
   
-  var path: String {
-    return rawValue
+  case getMovies(pageIndex: Int)
+  case getMovieVideo(id: Int)
+  
+  // MARK: - URL Components
+  
+  var url: URL? {
+    var component = URLComponents()
+    component.scheme = "https"
+    component.host = "api.themoviedb.org"
+    component.path = path
+    component.queryItems = pageQuery()
+    return component.url
+  }
+  
+  // MARK: - URL Query Items
+  
+  private func pageQuery()-> [URLQueryItem]? {
+    switch self {
+    case .getMovies(let page):
+      return [
+        URLQueryItem(name: "api_key", value: QueryItem.apiKey.rawValue),
+        URLQueryItem(name: "language", value: QueryItem.language.rawValue),
+        URLQueryItem(name: "page", value: page.description)
+      ]
+    case .getMovieVideo:
+      return [
+        URLQueryItem(name: "api_key", value: QueryItem.apiKey.rawValue)
+      ]
+    }
+  }
+}
+
+extension APIEndpoint {
+  
+  fileprivate var path: String {
+    switch self {
+    case .getMovies:
+      return "/3/movie/now_playing"
+    case .getMovieVideo(let id):
+      return "/3/movie/\(id)/videos"
+    }
   }
 }

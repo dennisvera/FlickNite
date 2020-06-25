@@ -14,8 +14,45 @@ extension String {
   
   func toTtitle(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
     return StringBuilder(string: self)
-      .size(18.0)
+      .size(24.0)
       .color(color)
+      .fontName(.latoBold)
+      .textAlignment(textAlignment)
+      .build()
+  }
+  
+  func toSubtitleBold(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
+    return StringBuilder(string: self)
+      .size(17.0)
+      .color(color)
+      .fontName(.latoBold)
+      .textAlignment(textAlignment)
+      .build()
+  }
+  
+  func toSubtitle(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
+    return StringBuilder(string: self)
+      .size(17.0)
+      .color(color)
+      .fontName(.latoRegular)
+      .textAlignment(textAlignment)
+      .build()
+  }
+  
+  func toDetail(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
+    return StringBuilder(string: self)
+      .size(14.0)
+      .color(color)
+      .fontName(.latoRegular)
+      .textAlignment(textAlignment)
+      .build()
+  }
+  
+  func toMetadata(color: UIColor = .black, textAlignment: NSTextAlignment = .left) -> NSAttributedString {
+    return StringBuilder(string: self)
+      .size(12.0)
+      .color(color)
+      .fontName(.latoRegular)
       .textAlignment(textAlignment)
       .build()
   }
@@ -83,6 +120,9 @@ final class StringBuilder {
     
     // Configure Paragraph Style
     paragraphStyle.alignment = textAlignment
+    
+    // Set Paragraph Style Line Spacing
+    paragraphStyle.lineSpacing = 4
     
     // Define Attributes
     let attributes: [NSAttributedString.Key: Any] = [
