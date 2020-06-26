@@ -14,6 +14,9 @@ protocol MovieDetailViewModelProtocol: class {
   /// The movie model that contains all of the Movie properties
   var movie: Movie { get }
   
+  /// Closure for handling play movie trailer button
+  var didTapPlayButton: ((String) -> Void)? { get }
+  
   /// The movie backdrop path for displaying movie poster
   var backdropPath: String { get }
 }

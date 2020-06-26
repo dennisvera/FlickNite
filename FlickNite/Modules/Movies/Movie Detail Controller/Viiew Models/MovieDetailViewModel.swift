@@ -15,6 +15,8 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
   
   let movie: Movie
   
+  var didTapPlayButton: ((String) -> Void)?
+  
   var backdropPath: String {
     return movie.backdropPath ?? ""
   }
@@ -25,4 +27,9 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     self.movie = movie
   }
   
+  // MARK: - Public API Methods
+  
+  func showMovieTrailer() {
+    didTapPlayButton?("1234")
+  }
 }

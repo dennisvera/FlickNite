@@ -81,7 +81,23 @@ class MoviesCoordinator: Coordinator {
     // Configure Movie Detail View Controller
     movieDetailViewController.viewModel = viewModel
     
+    // Install Handlers
+    viewModel.didTapPlayButton = { [weak self] videoId in
+      guard let strongSelf = self else { return }
+      strongSelf.showMovieTrailer(with: "x8DKg_fsacM")
+    }
+    
     // Push Movie Detail View Controller Onto Navigation Stack
     navigationController.pushViewController(movieDetailViewController, animated: true)
+  }
+  
+  private func showMovieTrailer(with videoId: String) {
+    // Initialize Web View Controller
+    let webViewController = WebViewController()
+    
+    webViewController.videoId = videoId
+    
+    // Push Web View Controller Onto Navigation Stack
+    navigationController.pushViewController(webViewController, animated: true)
   }
 }

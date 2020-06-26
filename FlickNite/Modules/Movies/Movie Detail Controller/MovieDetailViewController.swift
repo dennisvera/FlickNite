@@ -35,6 +35,7 @@ final class MovieDetailViewController: UIViewController {
     super.viewDidLoad()
     
     setupViews()
+    setupPlayButton()
     setupNavigationBar()
   }
   
@@ -70,6 +71,13 @@ final class MovieDetailViewController: UIViewController {
       make.height.equalTo(view.snp.height).multipliedBy(0.35)
     }
     
+    // Configure Image View
+    let imageBaseUrl = Strings.imageBaseUrl
+    guard let posterPath = viewModel?.backdropPath else { return }
+    moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
+  }
+  
+  private func setupPlayButton() {
     view.addSubview(playButton)
     playButton.snp.makeConstraints { make in
       make.centerX.equalTo(moviePosterImageView)
@@ -77,9 +85,13 @@ final class MovieDetailViewController: UIViewController {
       make.width.height.equalTo(60)
     }
     
-    // Configure Image View
-    let imageBaseUrl = Strings.imageBaseUrl
-    guard let posterPath = viewModel?.backdropPath else { return }
-    moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
+    playButton.addTarget(self, action: #selector(handlePlayButton), for: .touchUpInside)
   }
+  
+  // MARK: - Actions
+   
+   @IBAction func handlePlayButton(button: UIButton) {
+     // Notify View Model
+     viewModel?.showMovieTrailer()
+   }
 }

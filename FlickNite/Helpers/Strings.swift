@@ -18,6 +18,9 @@ struct Strings {
   
   // MARK: - General
   
-  /// TMDB Image base url.
+  /// The TMDB Image base url that displays poster images.
   static let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
+  
+  /// The YouTube url string that displaying videos.
+  static let youTubeEmbedString = "https://www.youtube.com/embed/"
 }
