@@ -13,8 +13,6 @@ final class MovieDetailViewController: UIViewController {
   
   // MARK: - Properties
   
-  var movie: Movie?
-  
   private let moviePosterImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
@@ -22,11 +20,7 @@ final class MovieDetailViewController: UIViewController {
     return imageView
   }()
   
-  private let titleLabel: UILabel = {
-    let label = UILabel()
-    label.font = .boldSystemFont(ofSize: 20)
-    return label
-  }()
+  var viewModel: MovieDetailViewModel?
   
   // MARK: - View Life Cycle
   
@@ -37,12 +31,27 @@ final class MovieDetailViewController: UIViewController {
     setupNavigationBar()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Make the navigation bar background clear
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.isTranslucent = true
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    
+    // Remove Navigation Bar Back Button Title
+    self.navigationItem.title = ""
+    
+    navigationController?.navigationBar.isTranslucent = false
+  }
+  
   // MARK: - Helper Methods
   
   private func setupNavigationBar() {
-    // Set Title
-    title = movie?.title
-    
     navigationItem.largeTitleDisplayMode = .never
     navigationController?.navigationBar.tintColor = .white
   }
@@ -56,8 +65,8 @@ final class MovieDetailViewController: UIViewController {
     }
     
     // Configure Image View
-    let imageBaseUrl = "https://image.tmdb.org/t/p/w300/"
-    guard let posterPath = movie?.posterPath else { return }
+    let imageBaseUrl = Strings.imageBaseUrl
+    guard let posterPath = viewModel?.posterPath else { return }
     moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
   }
 }

@@ -59,7 +59,7 @@ class MoviesCoordinator: Coordinator {
     
     // Initialize Now Playing View Controller
     let moviesCollectionViewController = MoviesCollectionViewController()
-    // Configure Now Playing View Controller
+    // Configure Movies View Controller
     moviesCollectionViewController.viewModel = viewModel
     
     // Install Handlers
@@ -73,11 +73,13 @@ class MoviesCoordinator: Coordinator {
   }
   
   private func showMovie(_ movie: Movie) {
+    // Initialize Movie Detail View Model
+    let viewModel = MovieDetailViewModel(movie: movie)
+    
     // Initialize Movie Detail View Controller
     let movieDetailViewController = MovieDetailViewController()
-    
     // Configure Movie Detail View Controller
-    movieDetailViewController.movie = movie
+    movieDetailViewController.viewModel = viewModel
     
     // Push Movie Detail View Controller Onto Navigation Stack
     navigationController.pushViewController(movieDetailViewController, animated: true)
