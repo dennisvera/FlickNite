@@ -11,8 +11,9 @@ import Foundation
 /// Protocol which defines the variables / functions for the MovieDetailViewModel.
 protocol MovieDetailViewModelProtocol: class {
 
-  /// The Movie model
+  /// The movie model that contains all of the Movie properties
   var movie: Movie { get }
   
-  var posterPath: String { get }
+  /// The movie backdrop path for displaying movie poster
+  var backdropPath: String { get }
 }

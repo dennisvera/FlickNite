@@ -15,8 +15,8 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
   
   let movie: Movie
   
-  var posterPath: String {
-    return movie.posterPath ?? ""
+  var backdropPath: String {
+    return movie.backdropPath ?? ""
   }
   
   // MARK: - Initialization

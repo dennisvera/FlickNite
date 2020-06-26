@@ -54,10 +54,10 @@ class MoviesCoordinator: Coordinator {
     // Initialize API Client
     let apiClient = FlickNiteAPIClient()
     
-    // Initialize Now Playing View Model
+    // Initialize Movies View Model
     let viewModel = MoviesViewModel(apiClient: apiClient)
     
-    // Initialize Now Playing View Controller
+    // Initialize Movies View Controller
     let moviesCollectionViewController = MoviesCollectionViewController()
     // Configure Movies View Controller
     moviesCollectionViewController.viewModel = viewModel

@@ -16,8 +16,15 @@ final class MovieDetailViewController: UIViewController {
   private let moviePosterImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
-    imageView.contentMode = .scaleAspectFit
+    imageView.contentMode = .scaleAspectFill
     return imageView
+  }()
+  
+  private let playButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.setImage(#imageLiteral(resourceName: "play_button_icon"), for: .normal)
+    button.tintColor = UIColor.FlickNite.white
+    return button
   }()
   
   var viewModel: MovieDetailViewModel?
@@ -33,7 +40,6 @@ final class MovieDetailViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
     // Make the navigation bar background clear
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
@@ -42,7 +48,6 @@ final class MovieDetailViewController: UIViewController {
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(true)
-    
     // Remove Navigation Bar Back Button Title
     self.navigationItem.title = ""
     
@@ -57,16 +62,24 @@ final class MovieDetailViewController: UIViewController {
   }
   
   private func setupViews() {
-    view.backgroundColor = UIColor.FlickNite.darkGray
+    view.backgroundColor = UIColor.FlickNite.mediumGray
     
     view.addSubview(moviePosterImageView)
     moviePosterImageView.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
+      make.trailing.leading.width.equalToSuperview()
+      make.height.equalTo(view.snp.height).multipliedBy(0.35)
+    }
+    
+    view.addSubview(playButton)
+    playButton.snp.makeConstraints { make in
+      make.centerX.equalTo(moviePosterImageView)
+      make.centerY.equalTo(moviePosterImageView).offset(10)
+      make.width.height.equalTo(60)
     }
     
     // Configure Image View
     let imageBaseUrl = Strings.imageBaseUrl
-    guard let posterPath = viewModel?.posterPath else { return }
+    guard let posterPath = viewModel?.backdropPath else { return }
     moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
   }
 }
