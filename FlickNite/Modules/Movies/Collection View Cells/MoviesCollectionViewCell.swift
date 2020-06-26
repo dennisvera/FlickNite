@@ -17,7 +17,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
   let movieImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
-    imageView.layer.cornerRadius = 12
+    imageView.layer.cornerRadius = 16
     imageView.contentMode = .scaleAspectFit
     return imageView
   }()
@@ -53,8 +53,9 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     // Configure Image View
     let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     guard let posterPath = presentable?.posterPath else { return }
-    guard let url = URL(string: imageBaseUrl + posterPath) else { return }
+    guard let posterUrl = URL(string: imageBaseUrl + posterPath) else { return }
     let thumbnailSize = CGSize(width: 300, height: 300)
-    movieImageView.sd_setImage(with: url, placeholderImage: nil, context: [.imageThumbnailPixelSize : thumbnailSize])
+    movieImageView.sd_setImage(with: posterUrl, placeholderImage: nil,
+                               context: [.imageThumbnailPixelSize : thumbnailSize])
   }
 }

@@ -57,7 +57,7 @@ class MoviesCollectionViewController: UICollectionViewController {
     // Configure Collection View
     collectionView.prefetchDataSource = self
     collectionView.isPrefetchingEnabled = true
-    collectionView.backgroundColor = UIColor.FlickNite.white
+    collectionView.backgroundColor = UIColor.FlickNite.mediumGray
 
     // Register Collection View Cell
     collectionView.register(MoviesCollectionViewCell.self,
@@ -143,7 +143,7 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     if let collection = self.collectionView {
       let width = (collection.bounds.width - totalSpacing) / numberOfItemsPerRow
-      return CGSize(width: width, height: 280)
+      return CGSize(width: width, height: 260)
     } else {
       return CGSize(width: 0, height: 0)
     }
@@ -152,7 +152,7 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return -10
+    return minimumSpacing
   }
 
   func collectionView(_ collectionView: UICollectionView,
@@ -165,7 +165,7 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       insetForSectionAt section: Int) -> UIEdgeInsets {
     
-    return .init(top: 5, left: 10, bottom: 10, right: 10)
+    return .init(top: 10, left: 10, bottom: 10, right: 10)
   }
 }
 
