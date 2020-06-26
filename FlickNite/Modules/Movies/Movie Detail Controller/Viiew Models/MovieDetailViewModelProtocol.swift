@@ -14,9 +14,21 @@ protocol MovieDetailViewModelProtocol: class {
   /// The movie model that contains all of the Movie properties
   var movie: Movie { get }
   
+  /// The movie video Id for the selected movie
+  var videoId: String? { get }
+  
+  /// The Network Client for making API calls
+  var apiClient: FlickNiteAPIClient { get }
+  
   /// Closure for handling play movie trailer button
   var didTapPlayButton: ((String) -> Void)? { get }
   
   /// The movie backdrop path for displaying movie poster
   var backdropPath: String { get }
+  
+  /// Method that calls the API Client to fetch movie details
+  func fetchMovieTrailer()
+  
+  /// Public facing method that calls the didTapPlayButton closure
+  func showMovieTrailer()
 }
