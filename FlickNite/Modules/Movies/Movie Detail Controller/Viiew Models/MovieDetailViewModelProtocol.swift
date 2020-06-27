@@ -23,8 +23,11 @@ protocol MovieDetailViewModelProtocol: class {
   /// Closure for handling play movie trailer button
   var didTapPlayButton: ((String) -> Void)? { get }
   
-  /// The movie backdrop path for displaying movie poster
+  /// The movie url path for displaying movie back drop poster
   var backdropPath: String { get }
+  
+  /// The movie url path for displaying movie poster
+  var posterPath: String { get }
   
   /// Method that calls the API Client to fetch movie details
   func fetchMovieTrailer()

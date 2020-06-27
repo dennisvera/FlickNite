@@ -17,11 +17,15 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
   let apiClient: FlickNiteAPIClient
   
   var video: [Video] = []
-
+  
   var didTapPlayButton: ((String) -> Void)?
   
   var backdropPath: String {
     return movie.backdropPath ?? ""
+  }
+  
+  var posterPath: String {
+    return movie.posterPath ?? ""
   }
   
   var videoId: String {

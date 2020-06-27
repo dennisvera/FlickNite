@@ -73,8 +73,13 @@ final class MovieDetailViewController: UIViewController {
     
     // Configure Image View
     let imageBaseUrl = Strings.imageBaseUrl
-    guard let posterPath = viewModel?.backdropPath else { return }
-    moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
+    if viewModel?.backdropPath != "" {
+      guard let backdropPath = viewModel?.backdropPath else { return }
+      moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + backdropPath))
+    } else {
+      guard let posterPath = viewModel?.posterPath else { return }
+      moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
+    }
   }
   
   private func setupPlayButton() {
