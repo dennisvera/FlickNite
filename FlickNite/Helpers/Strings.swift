@@ -16,11 +16,13 @@ struct Strings {
   /// Movies collection view controller title.
   static let moviesTitle = "Movies"
   
+  // MARK: - Web View Controller
+  
+  /// The YouTube url string that displaying videos.
+  static let youTubeEmbedString = "https://www.youtube.com/embed/"
+  
   // MARK: - General
   
   /// The TMDB Image base url that displays poster images.
   static let imageBaseUrl = "https://image.tmdb.org/t/p/w500/"
-  
-  /// The YouTube url string that displaying videos.
-  static let youTubeEmbedString = "https://www.youtube.com/embed/"
 }

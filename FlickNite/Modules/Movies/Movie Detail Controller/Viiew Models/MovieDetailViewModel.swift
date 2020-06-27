@@ -14,13 +14,18 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
   // MARK: - Properties
   
   let movie: Movie
-  var videoId: String?
   let apiClient: FlickNiteAPIClient
   
+  var video: [Video] = []
+
   var didTapPlayButton: ((String) -> Void)?
   
   var backdropPath: String {
     return movie.backdropPath ?? ""
+  }
+  
+  var videoId: String {
+    return video.first?.key ?? ""
   }
   
   // MARK: - Initialization
@@ -34,13 +39,13 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
   
   // MARK: - Helper Methods
   
-  private func fetchMovieTrailer() {
+  func fetchMovieTrailer() {
     apiClient.fechMovieTrailer(with: movie.id) { [weak self] result in
       guard let strongSelf = self else { return }
       
       switch result {
       case .success(let movie):
-        strongSelf.videoId = movie.results[0].key
+        strongSelf.video.append(contentsOf: movie.results)
       case .failure(let error):
         print(error)
       }
@@ -50,6 +55,6 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
   // MARK: - Public API Methods
   
   func showMovieTrailer() {
-    didTapPlayButton?(videoId ?? "")
+    didTapPlayButton?(videoId)
   }
 }

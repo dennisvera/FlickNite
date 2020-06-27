@@ -14,8 +14,8 @@ protocol MovieDetailViewModelProtocol: class {
   /// The movie model that contains all of the Movie properties
   var movie: Movie { get }
   
-  /// The movie video Id for the selected movie
-  var videoId: String? { get }
+  /// An array of video objects containing all videos and their properties
+  var video: [Video] { get }
   
   /// The Network Client for making API calls
   var apiClient: FlickNiteAPIClient { get }
