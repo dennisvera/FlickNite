@@ -36,6 +36,18 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     return movie.title
   }
   
+  var releaseDate: String {
+    return String(movie.releaseDate.prefix(4))
+  }
+  
+  var popularityScore: String {
+    return String(format: "%.0f", movie.popularity) + "%"
+  }
+  
+  var voteCount: String {
+    return String(movie.voteCount)
+  }
+  
   // MARK: - Initialization
   
   init(apiClient: FlickNiteAPIClient, movie: Movie) {

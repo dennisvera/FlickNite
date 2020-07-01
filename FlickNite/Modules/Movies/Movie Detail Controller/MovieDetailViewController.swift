@@ -56,6 +56,51 @@ final class MovieDetailViewController: UIViewController {
     return imageView
   }()
   
+  private let releaseDateLabel: UILabel! = {
+    let label = UILabel()
+    return label
+  }()
+  
+  private let ratedLabel: UILabel! = {
+    let label = UILabel()
+    return label
+  }()
+  
+  private let runTimeLabel: UILabel! = {
+    let label = UILabel()
+    return label
+  }()
+  
+  private let popularityScoreLabel: UILabel! = {
+    let label = UILabel()
+    return label
+  }()
+  
+  private let voteScoreLabel: UILabel! = {
+    let label = UILabel()
+    return label
+  }()
+  
+  private let popcornImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.image = #imageLiteral(resourceName: "popcorn_icon")
+    imageView.clipsToBounds = true
+    imageView.contentMode = .scaleAspectFill
+    imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+    imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    return imageView
+  }()
+  
+  private let likesImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.image = #imageLiteral(resourceName: "likes_icon")
+    imageView.clipsToBounds = true
+    imageView.contentMode = .scaleAspectFill
+    imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+    imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    return imageView
+  }()
+  
   var viewModel: MovieDetailViewModel?
   private let imageBaseUrl = Strings.imageBaseUrl
   
@@ -97,7 +142,7 @@ final class MovieDetailViewController: UIViewController {
     view.addSubview(backgroundPosterImageView)
     backgroundPosterImageView.snp.makeConstraints { make in
       make.trailing.leading.width.equalToSuperview()
-      make.height.equalTo(view.snp.height).multipliedBy(0.35)
+      make.height.equalTo(view.snp.height).multipliedBy(0.32)
     }
     
     if viewModel?.backdropPath != "" {
@@ -146,7 +191,7 @@ final class MovieDetailViewController: UIViewController {
     detailContainerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints { make in
       make.leading.equalTo(detailPosterImageView.snp.trailing).offset(16)
-      make.top.equalTo(detailPosterImageView.snp.top).offset(10)
+      make.top.equalTo(detailPosterImageView.snp.top).offset(6)
     }
     
     titleLabel.attributedText = viewModel?.title.toTtitle(color: UIColor.FlickNite.white,
@@ -157,14 +202,62 @@ final class MovieDetailViewController: UIViewController {
     heartIconImageView.snp.makeConstraints { make in
       make.height.width.equalTo(30)
       make.top.equalTo(detailPosterImageView.snp.topMargin).offset(2)
-      make.trailing.equalTo(detailContainerView.snp.trailing).offset(-30)
+      make.trailing.equalTo(detailContainerView.snp.trailing).offset(-20)
       make.leading.equalTo(titleLabel.snp.trailing).offset(10)
+    }
+    
+    // Configure Release Info Stack View
+    let realeaseInfoStackView = UIStackView(arrangedSubviews: [releaseDateLabel, ratedLabel, runTimeLabel])
+    realeaseInfoStackView.spacing = 18
+    realeaseInfoStackView.axis = .horizontal
+    realeaseInfoStackView.distribution = .fillProportionally
+    
+    detailContainerView.addSubview(realeaseInfoStackView)
+    realeaseInfoStackView.snp.makeConstraints { make in
+      make.top.equalTo(titleLabel.snp.bottom).offset(14)
+      make.leading.equalTo(titleLabel.snp.leading)
+      make.trailing.equalTo(detailContainerView.snp.trailing).offset(20).priority(750)
+    }
+    
+    releaseDateLabel.attributedText = viewModel?.releaseDate.toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                                        textAlignment: .left)
+    
+    ratedLabel.attributedText = "PG".toSubtitle(color: UIColor.FlickNite.lightGray, textAlignment: .left)
+    runTimeLabel.attributedText = "133".toSubtitle(color: UIColor.FlickNite.lightGray, textAlignment: .left)
+    
+    let popularityStackView = UIStackView(arrangedSubviews: [popcornImageView, popularityScoreLabel])
+    popularityStackView.axis = .horizontal
+    popularityStackView.spacing = 6
+    
+    
+    popularityScoreLabel.attributedText = viewModel?.popularityScore.toDetail(color: UIColor.FlickNite.lightGray,
+                                                                              textAlignment: .left)
+    
+    let voteScoreStackView = UIStackView(arrangedSubviews: [likesImageView, voteScoreLabel])
+    voteScoreStackView.axis = .horizontal
+    voteScoreStackView.spacing = 6
+    
+    voteScoreLabel.attributedText = viewModel?.voteCount.toDetail(color: UIColor.FlickNite.lightGray, textAlignment: .left)
+    
+    // Configure Vote Score Info Stack View
+    let scoreStackView = UIStackView(arrangedSubviews: [popularityStackView, voteScoreStackView])
+    scoreStackView.spacing = 18
+    scoreStackView.axis = .horizontal
+    scoreStackView.distribution = .fillProportionally
+    
+    detailContainerView.addSubview(scoreStackView)
+    scoreStackView.snp.makeConstraints { make in
+      make.leading.equalTo(realeaseInfoStackView.snp.leading)
+      make.top.equalTo(realeaseInfoStackView.snp.bottom).offset(14)
+      make.trailing.equalTo(detailContainerView.snp.trailing).offset(20).priority(750)
     }
   }
   
   // MARK: - Actions
   
   @IBAction func handlePlayButton(button: UIButton) {
+    playButton.tintColor = UIColor.FlickNite.white
+
     // Notify View Model
     viewModel?.showMovieTrailer()
   }

@@ -23,6 +23,15 @@ protocol MovieDetailViewModelProtocol: class {
   /// The Movie Title
   var title: String { get }
   
+  /// The Movie Release Date
+  var releaseDate: String { get }
+  
+  /// The Movie Popularity Score
+  var popularityScore: String { get }
+  
+  /// The Movie Vote Count
+  var voteCount: String { get }
+  
   /// Closure for handling play movie trailer button
   var didTapPlayButton: ((String) -> Void)? { get }
   
