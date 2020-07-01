@@ -48,6 +48,10 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     return String(movie.voteCount)
   }
   
+  var synopsis: String {
+    return movie.overview
+  }
+  
   // MARK: - Initialization
   
   init(apiClient: FlickNiteAPIClient, movie: Movie) {

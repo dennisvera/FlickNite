@@ -101,8 +101,22 @@ final class MovieDetailViewController: UIViewController {
     return imageView
   }()
   
+  private let synopsisLabel: UILabel! = {
+    let label = UILabel()
+    return label
+  }()
+  
+  private let synopsisTextView: UITextView = {
+    let textView = UITextView()
+    textView.clipsToBounds = true
+    textView.isScrollEnabled = false
+    textView.backgroundColor = UIColor.FlickNite.darkGray
+    return textView
+  }()
+  
   var viewModel: MovieDetailViewModel?
   private let imageBaseUrl = Strings.imageBaseUrl
+  private let synopsis = "Synopsis"
   
   // MARK: - View Life Cycle
   
@@ -111,7 +125,8 @@ final class MovieDetailViewController: UIViewController {
     
     setupNavigationBar()
     setupPosterView()
-    setupDetailContainerViews()
+    setupDetailContainerView()
+    setupSynopsisView()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -164,7 +179,7 @@ final class MovieDetailViewController: UIViewController {
     playButton.addTarget(self, action: #selector(handlePlayButton), for: .touchUpInside)
   }
   
-  private func setupDetailContainerViews() {
+  private func setupDetailContainerView() {
     view.backgroundColor = UIColor.FlickNite.darkGray
     
     // Configure Detail Container View
@@ -194,7 +209,7 @@ final class MovieDetailViewController: UIViewController {
       make.leading.equalTo(detailPosterImageView.snp.trailing).offset(Layout.TitleLabel.leading)
     }
     
-    titleLabel.attributedText = viewModel?.title.toTtitle(color: UIColor.FlickNite.white,
+    titleLabel.attributedText = viewModel?.title.toTitle(color: UIColor.FlickNite.white,
                                                           textAlignment: .left)
     
     // Configure Heart Icon Image
@@ -210,15 +225,15 @@ final class MovieDetailViewController: UIViewController {
     let realeaseInfoStackView = UIStackView(arrangedSubviews: [releaseDateLabel, ratedLabel, runTimeLabel])
     realeaseInfoStackView.axis = .horizontal
     realeaseInfoStackView.distribution = .fillProportionally
-    realeaseInfoStackView.spacing = Layout.StackViews.spacing
+    realeaseInfoStackView.spacing = Layout.DetailStackView.spacing
     
     detailContainerView.addSubview(realeaseInfoStackView)
     realeaseInfoStackView.snp.makeConstraints { make in
-      make.top.equalTo(titleLabel.snp.bottom).offset(Layout.StackViews.spacing)
       make.leading.equalTo(titleLabel.snp.leading)
+      make.top.equalTo(titleLabel.snp.bottom).offset(Layout.DetailStackView.spacing)
       make.trailing.equalTo(detailContainerView.snp.trailing)
-        .offset(Layout.StackViews.trailingOffset)
-        .priority(Layout.StackViews.trailingPriority)
+        .offset(Layout.DetailStackView.trailingOffset)
+        .priority(Layout.DetailStackView.trailingPriority)
     }
     
     releaseDateLabel.attributedText = viewModel?.releaseDate.toSubtitle(color: UIColor.FlickNite.lightGray,
@@ -230,7 +245,7 @@ final class MovieDetailViewController: UIViewController {
     // Configure Popularity Stack View
     let popularityStackView = UIStackView(arrangedSubviews: [popularityScoreImageView, popularityScoreLabel])
     popularityStackView.axis = .horizontal
-    popularityStackView.spacing = Layout.StackViews.spacingSix
+    popularityStackView.spacing = Layout.DetailStackView.spacingSix
     
     popularityScoreLabel.attributedText = viewModel?.popularityScore.toDetail(color: UIColor.FlickNite.lightGray,
                                                                               textAlignment: .left)
@@ -238,25 +253,48 @@ final class MovieDetailViewController: UIViewController {
     // Configure Vote Score Stack View
     let voteScoreStackView = UIStackView(arrangedSubviews: [voteScoreImageView, voteScoreLabel])
     voteScoreStackView.axis = .horizontal
-    voteScoreStackView.spacing = Layout.StackViews.spacingSix
+    voteScoreStackView.spacing = Layout.DetailStackView.spacingSix
     
     voteScoreLabel.attributedText = viewModel?.voteCount.toDetail(color: UIColor.FlickNite.lightGray,
                                                                   textAlignment: .left)
     
     // Configure Score Stack View
     let scoreStackView = UIStackView(arrangedSubviews: [popularityStackView, voteScoreStackView])
-    scoreStackView.spacing = Layout.StackViews.spacing
+    scoreStackView.spacing = Layout.DetailStackView.spacing
     scoreStackView.axis = .horizontal
     scoreStackView.distribution = .fillProportionally
     
     detailContainerView.addSubview(scoreStackView)
     scoreStackView.snp.makeConstraints { make in
       make.leading.equalTo(realeaseInfoStackView.snp.leading)
-      make.top.equalTo(realeaseInfoStackView.snp.bottom).offset(Layout.StackViews.topOffset)
+      make.top.equalTo(realeaseInfoStackView.snp.bottom).offset(Layout.DetailStackView.topOffset)
       make.trailing.equalTo(detailContainerView.snp.trailing)
-        .offset(Layout.StackViews.trailingOffset)
-        .priority(Layout.StackViews.trailingPriority)
+        .offset(Layout.DetailStackView.trailingOffset)
+        .priority(Layout.DetailStackView.trailingPriority)
     }
+  }
+  
+  private func setupSynopsisView() {
+    // Configure Synopsis Stack View
+    let synopsisStackView = UIStackView(arrangedSubviews: [synopsisLabel, synopsisTextView])
+    synopsisStackView.axis = .vertical
+    synopsisStackView.alignment = .fill
+    synopsisStackView.distribution = .equalCentering
+    synopsisStackView.spacing = Layout.SynopsisStackView.spacing
+    
+    view.addSubview(synopsisStackView)
+    synopsisStackView.snp.makeConstraints { make in
+      make.width.equalToSuperview().offset(Layout.SynopsisStackView.widthOffset)
+      make.leading.equalToSuperview().offset(Layout.SynopsisStackView.leadingOffset)
+      make.trailing.equalToSuperview().offset(Layout.SynopsisStackView.trailingOffset)
+      make.top.equalTo(detailContainerView.snp.bottom).offset(Layout.SynopsisStackView.topOffset)
+    }
+    
+    synopsisLabel.attributedText = synopsis.toSubtitleBold(color: UIColor.FlickNite.white,
+                                                           textAlignment: .left)
+    
+    synopsisTextView.attributedText = viewModel?.synopsis.toSubtitle(color: UIColor.FlickNite.lightGray,
+                                                                     textAlignment: .left)
   }
   
   // MARK: - Actions
@@ -312,12 +350,21 @@ private extension MovieDetailViewController {
       static let trailingOfffset = -20
     }
     
-    enum StackViews {
+    enum DetailStackView {
       static let topOffset = 14
       static let trailingOffset = 20
       static let spacing: CGFloat = 18
       static let trailingPriority = 750
       static let spacingSix: CGFloat = 6
+    }
+    
+    enum SynopsisStackView {
+      static let topOffset = 20
+      static let widthOffset = -32
+      static let leadingOffset = 16
+      static let trailingOffset = -16
+      static let spacing: CGFloat = 10
+
     }
   }
 }

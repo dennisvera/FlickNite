@@ -32,6 +32,9 @@ protocol MovieDetailViewModelProtocol: class {
   /// The Movie Vote Count
   var voteCount: String { get }
   
+  /// The Movie Synopsis
+  var synopsis: String { get }
+  
   /// Closure for handling play movie trailer button
   var didTapPlayButton: ((String) -> Void)? { get }
   

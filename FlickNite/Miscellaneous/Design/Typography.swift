@@ -12,7 +12,7 @@ extension String {
   
   // MARK: - Helper Methods
   
-  func toTtitle(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
+  func toTitle(color: UIColor = .black, textAlignment: NSTextAlignment = .center) -> NSAttributedString {
     return StringBuilder(string: self)
       .size(24.0)
       .color(color)
