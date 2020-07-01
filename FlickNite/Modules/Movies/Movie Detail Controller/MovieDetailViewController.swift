@@ -81,7 +81,7 @@ final class MovieDetailViewController: UIViewController {
     return label
   }()
   
-  private let popcornImageView: UIImageView = {
+  private let popularityScoreImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.image = #imageLiteral(resourceName: "popcorn_icon")
     imageView.clipsToBounds = true
@@ -91,7 +91,7 @@ final class MovieDetailViewController: UIViewController {
     return imageView
   }()
   
-  private let likesImageView: UIImageView = {
+  private let voteScoreImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.image = #imageLiteral(resourceName: "likes_icon")
     imageView.clipsToBounds = true
@@ -225,7 +225,8 @@ final class MovieDetailViewController: UIViewController {
     ratedLabel.attributedText = "PG".toSubtitle(color: UIColor.FlickNite.lightGray, textAlignment: .left)
     runTimeLabel.attributedText = "133".toSubtitle(color: UIColor.FlickNite.lightGray, textAlignment: .left)
     
-    let popularityStackView = UIStackView(arrangedSubviews: [popcornImageView, popularityScoreLabel])
+    // Configure Popularity Stack View
+    let popularityStackView = UIStackView(arrangedSubviews: [popularityScoreImageView, popularityScoreLabel])
     popularityStackView.axis = .horizontal
     popularityStackView.spacing = 6
     
@@ -233,13 +234,14 @@ final class MovieDetailViewController: UIViewController {
     popularityScoreLabel.attributedText = viewModel?.popularityScore.toDetail(color: UIColor.FlickNite.lightGray,
                                                                               textAlignment: .left)
     
-    let voteScoreStackView = UIStackView(arrangedSubviews: [likesImageView, voteScoreLabel])
+    // Configure Vote Score Stack View
+    let voteScoreStackView = UIStackView(arrangedSubviews: [voteScoreImageView, voteScoreLabel])
     voteScoreStackView.axis = .horizontal
     voteScoreStackView.spacing = 6
     
     voteScoreLabel.attributedText = viewModel?.voteCount.toDetail(color: UIColor.FlickNite.lightGray, textAlignment: .left)
     
-    // Configure Vote Score Info Stack View
+    // Configure Score Stack View
     let scoreStackView = UIStackView(arrangedSubviews: [popularityStackView, voteScoreStackView])
     scoreStackView.spacing = 18
     scoreStackView.axis = .horizontal
