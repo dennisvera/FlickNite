@@ -13,7 +13,7 @@ final class MovieDetailViewController: UIViewController {
   
   // MARK: - Properties
   
-  private let moviePosterImageView: UIImageView = {
+  private let backgroundPosterImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
     imageView.contentMode = .scaleAspectFill
@@ -27,16 +27,46 @@ final class MovieDetailViewController: UIViewController {
     return button
   }()
   
+  private let detailContainerView: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.FlickNite.mediumGray
+    return view
+  }()
+  
+  private let detailPosterImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.clipsToBounds = true
+    imageView.layer.cornerRadius = 8
+    imageView.contentMode = .scaleAspectFill
+    return imageView
+  }()
+  
+  private let titleLabel: UILabel = {
+    let label = UILabel()
+    label.numberOfLines = 2
+    return label
+  }()
+  
+  private let heartIconImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.clipsToBounds = true
+    imageView.contentMode = .scaleAspectFill
+    imageView.image = #imageLiteral(resourceName: "heart_icon").withRenderingMode(.alwaysTemplate)
+    imageView.tintColor = UIColor.FlickNite.white
+    return imageView
+  }()
+  
   var viewModel: MovieDetailViewModel?
+  private let imageBaseUrl = Strings.imageBaseUrl
   
   // MARK: - View Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setupViews()
-    setupPlayButton()
     setupNavigationBar()
+    setupPosterView()
+    setupDetailContainerViews()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -62,41 +92,80 @@ final class MovieDetailViewController: UIViewController {
     navigationController?.navigationBar.tintColor = .white
   }
   
-  private func setupViews() {
-    view.backgroundColor = UIColor.FlickNite.mediumGray
-    
-    view.addSubview(moviePosterImageView)
-    moviePosterImageView.snp.makeConstraints { make in
+  private func setupPosterView() {
+    // Configure Backdrop Image View
+    view.addSubview(backgroundPosterImageView)
+    backgroundPosterImageView.snp.makeConstraints { make in
       make.trailing.leading.width.equalToSuperview()
       make.height.equalTo(view.snp.height).multipliedBy(0.35)
     }
     
-    // Configure Image View
-    let imageBaseUrl = Strings.imageBaseUrl
     if viewModel?.backdropPath != "" {
       guard let backdropPath = viewModel?.backdropPath else { return }
-      moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + backdropPath))
+      backgroundPosterImageView.sd_setImage(with: URL(string: imageBaseUrl + backdropPath))
     } else {
       guard let posterPath = viewModel?.posterPath else { return }
-      moviePosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
+      backgroundPosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
     }
-  }
-  
-  private func setupPlayButton() {
+    
+    // Configure Play Button
     view.addSubview(playButton)
     playButton.snp.makeConstraints { make in
-      make.centerX.equalTo(moviePosterImageView)
-      make.centerY.equalTo(moviePosterImageView).offset(10)
+      make.centerX.equalTo(backgroundPosterImageView)
+      make.centerY.equalTo(backgroundPosterImageView).offset(10)
       make.width.height.equalTo(60)
     }
     
     playButton.addTarget(self, action: #selector(handlePlayButton), for: .touchUpInside)
   }
   
+  private func setupDetailContainerViews() {
+    view.backgroundColor = UIColor.FlickNite.darkGray
+    
+    // Configure Detail Container View
+    view.addSubview(detailContainerView)
+    detailContainerView.snp.makeConstraints { make in
+      make.trailing.leading.equalToSuperview()
+      make.top.equalTo(backgroundPosterImageView.snp.bottom)
+      make.height.equalTo(view.snp.height).multipliedBy(0.2)
+    }
+    
+    // Configure Detail Poster Image
+    detailContainerView.addSubview(detailPosterImageView)
+    detailPosterImageView.snp.makeConstraints { make in
+      make.width.equalTo(90)
+      make.centerY.equalToSuperview()
+      make.leading.equalToSuperview().offset(16)
+      make.height.equalTo(detailContainerView.snp.height).multipliedBy(0.82)
+    }
+    
+    guard let posterPath = viewModel?.posterPath else { return }
+    detailPosterImageView.sd_setImage(with: URL(string: imageBaseUrl + posterPath))
+    
+    // Configure Title
+    detailContainerView.addSubview(titleLabel)
+    titleLabel.snp.makeConstraints { make in
+      make.leading.equalTo(detailPosterImageView.snp.trailing).offset(16)
+      make.top.equalTo(detailPosterImageView.snp.top).offset(10)
+    }
+    
+    titleLabel.attributedText = viewModel?.title.toTtitle(color: UIColor.FlickNite.white,
+                                                          textAlignment: .left)
+    
+    // Configure Heart Icon Image
+    detailContainerView.addSubview(heartIconImageView)
+    heartIconImageView.snp.makeConstraints { make in
+      make.height.width.equalTo(30)
+      make.top.equalTo(detailPosterImageView.snp.topMargin).offset(2)
+      make.trailing.equalTo(detailContainerView.snp.trailing).offset(-30)
+      make.leading.equalTo(titleLabel.snp.trailing).offset(10)
+    }
+  }
+  
   // MARK: - Actions
-   
-   @IBAction func handlePlayButton(button: UIButton) {
-     // Notify View Model
-     viewModel?.showMovieTrailer()
-   }
+  
+  @IBAction func handlePlayButton(button: UIButton) {
+    // Notify View Model
+    viewModel?.showMovieTrailer()
+  }
 }

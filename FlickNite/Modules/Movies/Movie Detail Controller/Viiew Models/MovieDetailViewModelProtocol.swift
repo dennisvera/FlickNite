@@ -14,11 +14,14 @@ protocol MovieDetailViewModelProtocol: class {
   /// The movie model that contains all of the Movie properties
   var movie: Movie { get }
   
+  /// The Network Client for making API calls
+  var apiClient: FlickNiteAPIClient { get }
+  
   /// An array of video objects containing all videos and their properties
   var video: [Video] { get }
   
-  /// The Network Client for making API calls
-  var apiClient: FlickNiteAPIClient { get }
+  /// The Movie Title
+  var title: String { get }
   
   /// Closure for handling play movie trailer button
   var didTapPlayButton: ((String) -> Void)? { get }

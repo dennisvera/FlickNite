@@ -32,6 +32,10 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     return video.first?.key ?? ""
   }
   
+  var title: String {
+    return movie.title
+  }
+  
   // MARK: - Initialization
   
   init(apiClient: FlickNiteAPIClient, movie: Movie) {
