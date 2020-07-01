@@ -36,14 +36,14 @@ final class MovieDetailViewController: UIViewController {
   private let detailPosterImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.clipsToBounds = true
-    imageView.layer.cornerRadius = 8
+    imageView.layer.cornerRadius = Layout.DetailPosterImageView.cornerRadius
     imageView.contentMode = .scaleAspectFill
     return imageView
   }()
   
   private let titleLabel: UILabel = {
     let label = UILabel()
-    label.numberOfLines = 2
+    label.numberOfLines = Layout.TitleLabel.numberOfLines
     return label
   }()
   
@@ -86,8 +86,8 @@ final class MovieDetailViewController: UIViewController {
     imageView.image = #imageLiteral(resourceName: "popcorn_icon")
     imageView.clipsToBounds = true
     imageView.contentMode = .scaleAspectFill
-    imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
-    imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    imageView.widthAnchor.constraint(equalToConstant: Layout.ImageView.width).isActive = true
+    imageView.heightAnchor.constraint(equalToConstant: Layout.ImageView.width).isActive = true
     return imageView
   }()
   
@@ -96,8 +96,8 @@ final class MovieDetailViewController: UIViewController {
     imageView.image = #imageLiteral(resourceName: "likes_icon")
     imageView.clipsToBounds = true
     imageView.contentMode = .scaleAspectFill
-    imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
-    imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+    imageView.widthAnchor.constraint(equalToConstant: Layout.ImageView.width).isActive = true
+    imageView.heightAnchor.constraint(equalToConstant: Layout.ImageView.width).isActive = true
     return imageView
   }()
   
@@ -142,7 +142,7 @@ final class MovieDetailViewController: UIViewController {
     view.addSubview(backgroundPosterImageView)
     backgroundPosterImageView.snp.makeConstraints { make in
       make.trailing.leading.width.equalToSuperview()
-      make.height.equalTo(view.snp.height).multipliedBy(0.32)
+      make.height.equalTo(view.snp.height).multipliedBy(Layout.BackgroundPosterView.multipliedHeight)
     }
     
     if viewModel?.backdropPath != "" {
@@ -157,8 +157,8 @@ final class MovieDetailViewController: UIViewController {
     view.addSubview(playButton)
     playButton.snp.makeConstraints { make in
       make.centerX.equalTo(backgroundPosterImageView)
-      make.centerY.equalTo(backgroundPosterImageView).offset(10)
-      make.width.height.equalTo(60)
+      make.width.height.equalTo(Layout.PlayButton.width)
+      make.centerY.equalTo(backgroundPosterImageView).offset(Layout.PlayButton.centerY)
     }
     
     playButton.addTarget(self, action: #selector(handlePlayButton), for: .touchUpInside)
@@ -172,16 +172,16 @@ final class MovieDetailViewController: UIViewController {
     detailContainerView.snp.makeConstraints { make in
       make.trailing.leading.equalToSuperview()
       make.top.equalTo(backgroundPosterImageView.snp.bottom)
-      make.height.equalTo(view.snp.height).multipliedBy(0.2)
+      make.height.equalTo(view.snp.height).multipliedBy(Layout.DetailContainerView.multipliedHeight)
     }
     
     // Configure Detail Poster Image
     detailContainerView.addSubview(detailPosterImageView)
     detailPosterImageView.snp.makeConstraints { make in
-      make.width.equalTo(90)
       make.centerY.equalToSuperview()
-      make.leading.equalToSuperview().offset(16)
-      make.height.equalTo(detailContainerView.snp.height).multipliedBy(0.82)
+      make.width.equalTo(Layout.DetailPosterImageView.width)
+      make.leading.equalToSuperview().offset(Layout.DetailPosterImageView.leading)
+      make.height.equalTo(detailContainerView.snp.height).multipliedBy(Layout.DetailPosterImageView.multipliedHeight)
     }
     
     guard let posterPath = viewModel?.posterPath else { return }
@@ -190,8 +190,8 @@ final class MovieDetailViewController: UIViewController {
     // Configure Title
     detailContainerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints { make in
-      make.leading.equalTo(detailPosterImageView.snp.trailing).offset(16)
-      make.top.equalTo(detailPosterImageView.snp.top).offset(6)
+      make.top.equalTo(detailPosterImageView.snp.top).offset(Layout.TitleLabel.topOffset)
+      make.leading.equalTo(detailPosterImageView.snp.trailing).offset(Layout.TitleLabel.leading)
     }
     
     titleLabel.attributedText = viewModel?.title.toTtitle(color: UIColor.FlickNite.white,
@@ -200,23 +200,25 @@ final class MovieDetailViewController: UIViewController {
     // Configure Heart Icon Image
     detailContainerView.addSubview(heartIconImageView)
     heartIconImageView.snp.makeConstraints { make in
-      make.height.width.equalTo(30)
-      make.top.equalTo(detailPosterImageView.snp.topMargin).offset(2)
-      make.trailing.equalTo(detailContainerView.snp.trailing).offset(-20)
-      make.leading.equalTo(titleLabel.snp.trailing).offset(10)
+      make.height.width.equalTo(Layout.HeartIconImageView.height)
+      make.leading.equalTo(titleLabel.snp.trailing).offset(Layout.HeartIconImageView.leadingOffset)
+      make.top.equalTo(detailPosterImageView.snp.topMargin).offset(Layout.HeartIconImageView.topOffset)
+      make.trailing.equalTo(detailContainerView.snp.trailing).offset(Layout.HeartIconImageView.trailingOfffset)
     }
     
     // Configure Release Info Stack View
     let realeaseInfoStackView = UIStackView(arrangedSubviews: [releaseDateLabel, ratedLabel, runTimeLabel])
-    realeaseInfoStackView.spacing = 18
     realeaseInfoStackView.axis = .horizontal
     realeaseInfoStackView.distribution = .fillProportionally
+    realeaseInfoStackView.spacing = Layout.StackViews.spacing
     
     detailContainerView.addSubview(realeaseInfoStackView)
     realeaseInfoStackView.snp.makeConstraints { make in
-      make.top.equalTo(titleLabel.snp.bottom).offset(14)
+      make.top.equalTo(titleLabel.snp.bottom).offset(Layout.StackViews.spacing)
       make.leading.equalTo(titleLabel.snp.leading)
-      make.trailing.equalTo(detailContainerView.snp.trailing).offset(20).priority(750)
+      make.trailing.equalTo(detailContainerView.snp.trailing)
+        .offset(Layout.StackViews.trailingOffset)
+        .priority(Layout.StackViews.trailingPriority)
     }
     
     releaseDateLabel.attributedText = viewModel?.releaseDate.toSubtitle(color: UIColor.FlickNite.lightGray,
@@ -228,8 +230,7 @@ final class MovieDetailViewController: UIViewController {
     // Configure Popularity Stack View
     let popularityStackView = UIStackView(arrangedSubviews: [popularityScoreImageView, popularityScoreLabel])
     popularityStackView.axis = .horizontal
-    popularityStackView.spacing = 6
-    
+    popularityStackView.spacing = Layout.StackViews.spacingSix
     
     popularityScoreLabel.attributedText = viewModel?.popularityScore.toDetail(color: UIColor.FlickNite.lightGray,
                                                                               textAlignment: .left)
@@ -237,21 +238,24 @@ final class MovieDetailViewController: UIViewController {
     // Configure Vote Score Stack View
     let voteScoreStackView = UIStackView(arrangedSubviews: [voteScoreImageView, voteScoreLabel])
     voteScoreStackView.axis = .horizontal
-    voteScoreStackView.spacing = 6
+    voteScoreStackView.spacing = Layout.StackViews.spacingSix
     
-    voteScoreLabel.attributedText = viewModel?.voteCount.toDetail(color: UIColor.FlickNite.lightGray, textAlignment: .left)
+    voteScoreLabel.attributedText = viewModel?.voteCount.toDetail(color: UIColor.FlickNite.lightGray,
+                                                                  textAlignment: .left)
     
     // Configure Score Stack View
     let scoreStackView = UIStackView(arrangedSubviews: [popularityStackView, voteScoreStackView])
-    scoreStackView.spacing = 18
+    scoreStackView.spacing = Layout.StackViews.spacing
     scoreStackView.axis = .horizontal
     scoreStackView.distribution = .fillProportionally
     
     detailContainerView.addSubview(scoreStackView)
     scoreStackView.snp.makeConstraints { make in
       make.leading.equalTo(realeaseInfoStackView.snp.leading)
-      make.top.equalTo(realeaseInfoStackView.snp.bottom).offset(14)
-      make.trailing.equalTo(detailContainerView.snp.trailing).offset(20).priority(750)
+      make.top.equalTo(realeaseInfoStackView.snp.bottom).offset(Layout.StackViews.topOffset)
+      make.trailing.equalTo(detailContainerView.snp.trailing)
+        .offset(Layout.StackViews.trailingOffset)
+        .priority(Layout.StackViews.trailingPriority)
     }
   }
   
@@ -259,8 +263,61 @@ final class MovieDetailViewController: UIViewController {
   
   @IBAction func handlePlayButton(button: UIButton) {
     playButton.tintColor = UIColor.FlickNite.white
-
+    
     // Notify View Model
     viewModel?.showMovieTrailer()
+  }
+}
+
+private extension MovieDetailViewController {
+  
+  // MARK: - Types
+  
+  enum Layout {
+    
+    enum ImageView {
+      static let width: CGFloat = 24
+    }
+    
+    enum BackgroundPosterView {
+      static let multipliedHeight = 0.32
+    }
+    
+    enum PlayButton {
+      static let width = 60
+      static let centerY = 10
+    }
+    
+    enum DetailContainerView {
+      static let multipliedHeight = 0.2
+    }
+    
+    enum DetailPosterImageView {
+      static let width = 90
+      static let leading = 16
+      static let multipliedHeight = 0.82
+      static let cornerRadius: CGFloat = 8
+    }
+    
+    enum TitleLabel {
+      static let leading = 16
+      static let topOffset = 6
+      static let numberOfLines = 2
+    }
+    
+    enum HeartIconImageView {
+      static let height = 30
+      static let topOffset = 2
+      static let leadingOffset = 10
+      static let trailingOfffset = -20
+    }
+    
+    enum StackViews {
+      static let topOffset = 14
+      static let trailingOffset = 20
+      static let spacing: CGFloat = 18
+      static let trailingPriority = 750
+      static let spacingSix: CGFloat = 6
+    }
   }
 }
