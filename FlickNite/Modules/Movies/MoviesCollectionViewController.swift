@@ -13,7 +13,6 @@ class MoviesCollectionViewController: UICollectionViewController {
   // MARK: - Properties
   
   private let moviesTitle = Strings.moviesTitle
-  private let minimumSpacing: CGFloat = 10.0
 
   var viewModel: MoviesViewModel?
   
@@ -96,11 +95,11 @@ class MoviesCollectionViewController: UICollectionViewController {
 extension MoviesCollectionViewController {
   
   override func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 1
+    return Layout.numberOfSections
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return viewModel?.totalCount ?? 0
+    return viewModel?.totalCount ?? Layout.zero
   }
   
   override func collectionView(_ collectionView: UICollectionView,
@@ -137,35 +136,36 @@ extension MoviesCollectionViewController: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-    let numberOfItemsPerRow: CGFloat = 2
-    
-    let totalSpacing = (2 * minimumSpacing) + ((numberOfItemsPerRow - 1) * minimumSpacing)
+    let totalSpacing = (Layout.numberOfItemsPerRow * Layout.minimumSpacing) + ((Layout.numberOfItemsPerRow - 1) * Layout.minimumSpacing)
     
     if let collection = self.collectionView {
-      let width = (collection.bounds.width - totalSpacing) / numberOfItemsPerRow
-      return CGSize(width: width, height: 260)
+      let width = (collection.bounds.width - totalSpacing) / Layout.numberOfItemsPerRow
+      return CGSize(width: width, height: Layout.sizeForItemAtHeight)
     } else {
-      return CGSize(width: 0, height: 0)
+      return CGSize(width: Layout.zero, height: Layout.zero)
     }
   }
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return minimumSpacing
+    return Layout.minimumSpacing
   }
 
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return minimumSpacing
+    return Layout.minimumSpacing
   }
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       insetForSectionAt section: Int) -> UIEdgeInsets {
     
-    return .init(top: 10, left: 10, bottom: 10, right: 10)
+    return .init(top: Layout.insetForSectionAt,
+                 left: Layout.insetForSectionAt,
+                 bottom: Layout.insetForSectionAt,
+                 right: Layout.insetForSectionAt)
   }
 }
 
@@ -198,12 +198,27 @@ extension MoviesCollectionViewController: UICollectionViewDataSourcePrefetching 
 private extension MoviesCollectionViewController {
   
   func isLoadingCell(for indexPath: IndexPath) -> Bool {
-    return indexPath.row >= viewModel?.currentCount ?? 0
+    return indexPath.row >= viewModel?.currentCount ?? Layout.zero
   }
   
   func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
     let indexPathsForVisibleRows = collectionView.indexPathsForVisibleItems
     let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
     return Array(indexPathsIntersection)
+  }
+}
+
+private extension MoviesCollectionViewController {
+  
+  // MARK: - Types
+  
+  enum Layout {
+    
+    static let zero = 0
+    static let numberOfSections = 1
+    static let minimumSpacing: CGFloat = 10.0
+    static let insetForSectionAt: CGFloat = 10
+    static let numberOfItemsPerRow: CGFloat = 2
+    static let sizeForItemAtHeight: CGFloat = 260
   }
 }
