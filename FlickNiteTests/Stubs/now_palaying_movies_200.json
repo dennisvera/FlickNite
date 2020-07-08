@@ -1,0 +1,406 @@
+{
+    "results": [
+        {
+            "popularity": 147.062,
+            "vote_count": 21,
+            "video": false,
+            "poster_path": "/goEW6QqoFxNI2pfbpVqmXj2WXwd.jpg",
+            "id": 531876,
+            "adult": false,
+            "backdrop_path": "/n1RohH2VoK1CdVI2fXvcP19dSlm.jpg",
+            "original_language": "en",
+            "original_title": "The Outpost",
+            "genre_ids": [
+                28,
+                18,
+                36,
+                10752
+            ],
+            "title": "The Outpost",
+            "vote_average": 5.4,
+            "overview": "A small unit of U.S. soldiers, alone at the remote Combat Outpost Keating, located deep in the valley of three mountains in Afghanistan, battles to defend against an overwhelming force of Taliban fighters in a coordinated attack. The Battle of Kamdesh, as it was known, was the bloodiest American engagement of the Afghan War in 2009 and Bravo Troop 3-61 CAV became one of the most decorated units of the 19-year conflict.",
+            "release_date": "2020-06-24"
+        },
+        {
+            "popularity": 146.433,
+            "vote_count": 90,
+            "video": false,
+            "poster_path": "/hoUzSMxGu4Bm73EvH6B3iceFwW8.jpg",
+            "id": 706510,
+            "adult": false,
+            "backdrop_path": "/k8H6Qp4uJ9WHArPQwDqCaW9g3Sj.jpg",
+            "original_language": "en",
+            "original_title": "Desperados",
+            "genre_ids": [
+                35,
+                10749
+            ],
+            "title": "Desperados",
+            "vote_average": 6.7,
+            "overview": "A panicked young woman and her two best friends fly to Mexico to delete a ranting email she sent to her new boyfriend. On arrival, they run into her former beau, who soon gets caught up in their frantic scheme.",
+            "release_date": "2020-07-03"
+        },
+        {
+            "popularity": 97.816,
+            "vote_count": 296,
+            "video": false,
+            "poster_path": "/9zrbgYyFvwH8sy5mv9eT25xsAzL.jpg",
+            "id": 531454,
+            "adult": false,
+            "backdrop_path": "/jMO1icztaUUEUApdAQx0cZOt7b8.jpg",
+            "original_language": "en",
+            "original_title": "Eurovision Song Contest: The Story of Fire Saga",
+            "genre_ids": [
+                35,
+                10402
+            ],
+            "title": "Eurovision Song Contest: The Story of Fire Saga",
+            "vote_average": 6.5,
+            "overview": "Two small-town aspiring musicians chase their pop star dreams at a global music competition, where high stakes, scheming rivals and onstage mishaps test their bond.",
+            "release_date": "2020-06-26"
+        },
+        {
+            "popularity": 84.48,
+            "vote_count": 567,
+            "video": false,
+            "poster_path": "/tI8ocADh22GtQFV28vGHaBZVb0U.jpg",
+            "id": 475430,
+            "adult": false,
+            "backdrop_path": "/o0F8xAt8YuEm5mEZviX5pEFC12y.jpg",
+            "original_language": "en",
+            "original_title": "Artemis Fowl",
+            "genre_ids": [
+                12,
+                14,
+                878,
+                10751
+            ],
+            "title": "Artemis Fowl",
+            "vote_average": 5.9,
+            "overview": "Artemis Fowl is a 12-year-old genius and descendant of a long line of criminal masterminds. He soon finds himself in an epic battle against a race of powerful underground fairies who may be behind his father's disappearance.",
+            "release_date": "2020-06-12"
+        },
+        {
+            "popularity": 59.712,
+            "vote_count": 50,
+            "video": false,
+            "poster_path": "/ucktgbaMSaETUDLUBp1ubGD6aNj.jpg",
+            "id": 619592,
+            "adult": false,
+            "backdrop_path": "/eIqyISB5j99OSRZUuvdN9g2bBsS.jpg",
+            "original_language": "en",
+            "original_title": "Force of Nature",
+            "genre_ids": [
+                28,
+                18
+            ],
+            "title": "Force of Nature",
+            "vote_average": 5.4,
+            "overview": "A gang of thieves plan a heist during a hurricane and encounter trouble when a disgraced cop tries to force everyone in the building to evacuate.",
+            "release_date": "2020-07-02"
+        },
+        {
+            "popularity": 57.782,
+            "vote_count": 2764,
+            "video": false,
+            "poster_path": "/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg",
+            "id": 338762,
+            "adult": false,
+            "backdrop_path": "/lP5eKh8WOcPysfELrUpGhHJGZEH.jpg",
+            "original_language": "en",
+            "original_title": "Bloodshot",
+            "genre_ids": [
+                28,
+                878
+            ],
+            "title": "Bloodshot",
+            "vote_average": 7,
+            "overview": "After he and his wife are murdered, marine Ray Garrison is resurrected by a team of scientists. Enhanced with nanotechnology, he becomes a superhuman, biotech killing machine—'Bloodshot'. As Ray first trains with fellow super-soldiers, he cannot recall anything from his former life. But when his memories flood back and he remembers the man that killed both him and his wife, he breaks out of the facility to get revenge, only to discover that there's more to the conspiracy than he thought.",
+            "release_date": "2020-03-05"
+        },
+        {
+            "popularity": 51.179,
+            "vote_count": 2439,
+            "video": false,
+            "poster_path": "/f4aul3FyD3jv3v4bul1IrkWZvzq.jpg",
+            "id": 508439,
+            "adult": false,
+            "backdrop_path": "/xFxk4vnirOtUxpOEWgA1MCRfy6J.jpg",
+            "original_language": "en",
+            "original_title": "Onward",
+            "genre_ids": [
+                12,
+                16,
+                35,
+                14,
+                10751
+            ],
+            "title": "Onward",
+            "vote_average": 7.9,
+            "overview": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+            "release_date": "2020-02-29"
+        },
+        {
+            "popularity": 41.39,
+            "vote_count": 1042,
+            "video": false,
+            "poster_path": "/wxPhn4ef1EAo5njxwBkAEVrlJJG.jpg",
+            "id": 514847,
+            "adult": false,
+            "backdrop_path": "/naXUDz0VGK7aaPlEpsuYW8kNVsr.jpg",
+            "original_language": "en",
+            "original_title": "The Hunt",
+            "genre_ids": [
+                28,
+                27,
+                53
+            ],
+            "title": "The Hunt",
+            "vote_average": 6.7,
+            "overview": "Twelve strangers wake up in a clearing. They don't know where they are—or how they got there. In the shadow of a dark internet conspiracy theory, ruthless elitists gather at a remote location to hunt humans for sport. But their master plan is about to be derailed when one of the hunted turns the tables on her pursuers.",
+            "release_date": "2020-03-11"
+        },
+        {
+            "popularity": 40.4,
+            "vote_count": 1371,
+            "video": false,
+            "poster_path": "/gzlbb3yeVISpQ3REd3Ga1scWGTU.jpg",
+            "id": 443791,
+            "adult": false,
+            "backdrop_path": "/ww7eC3BqSbFsyE5H5qMde8WkxJ2.jpg",
+            "original_language": "en",
+            "original_title": "Underwater",
+            "genre_ids": [
+                28,
+                27,
+                878,
+                53
+            ],
+            "title": "Underwater",
+            "vote_average": 6.4,
+            "overview": "After an earthquake destroys their underwater station, six researchers must navigate two miles along the dangerous, unknown depths of the ocean floor to make it to safety in a race against time.",
+            "release_date": "2020-01-08"
+        },
+        {
+            "popularity": 39.357,
+            "vote_count": 17327,
+            "video": false,
+            "poster_path": "/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+            "id": 603,
+            "adult": false,
+            "backdrop_path": "/ByDf0zjLSumz1MP1cDEo2JWVtU.jpg",
+            "original_language": "en",
+            "original_title": "The Matrix",
+            "genre_ids": [
+                28,
+                878
+            ],
+            "title": "The Matrix",
+            "vote_average": 8.1,
+            "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+            "release_date": "1999-03-30"
+        },
+        {
+            "popularity": 37.555,
+            "vote_count": 22,
+            "video": false,
+            "poster_path": "/aINpljdt3VVMrCLtJW4BektwYOp.jpg",
+            "id": 522098,
+            "adult": false,
+            "backdrop_path": "/cjAirCV9TyTQcp7mFNRnvgkoVFV.jpg",
+            "original_language": "en",
+            "original_title": "Babyteeth",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "title": "Babyteeth",
+            "vote_average": 5.2,
+            "overview": "A terminally ill teen upsets her parents when she falls in love with a small-time drug dealer.",
+            "release_date": "2020-06-18"
+        },
+        {
+            "popularity": 35.111,
+            "vote_count": 757,
+            "video": false,
+            "poster_path": "/2kNnf7BwRCEm4bcFkdiE0T4U25s.jpg",
+            "id": 457335,
+            "adult": false,
+            "backdrop_path": "/xBHTHkNL1Urhc8K8NHzIih7unjs.jpg",
+            "original_language": "en",
+            "original_title": "Guns Akimbo",
+            "genre_ids": [
+                28,
+                35
+            ],
+            "title": "Guns Akimbo",
+            "vote_average": 6.4,
+            "overview": "An ordinary guy suddenly finds himself forced to fight a gladiator-like battle for a dark website that streams the violence for viewers. Miles must fight heavily armed Nix and also save his kidnapped ex-girlfriend.",
+            "release_date": "2019-09-09"
+        },
+        {
+            "popularity": 32.612,
+            "vote_count": 34,
+            "video": false,
+            "poster_path": "/zQFjMmE3K9AX5QrBL1SXIxYQ9jz.jpg",
+            "id": 579583,
+            "adult": false,
+            "backdrop_path": "/5rwcd24GGltKiqdPT4G2dmchLr9.jpg",
+            "original_language": "en",
+            "original_title": "The King of Staten Island",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "title": "The King of Staten Island",
+            "vote_average": 6.9,
+            "overview": "Scott has been a case of arrested development ever since his firefighter father died when he was seven. He’s now reached his mid-20s having achieved little, chasing a dream of becoming a tattoo artist that seems far out of reach. As his ambitious younger sister heads off to college, Scott is still living with his exhausted ER nurse mother and spends his days smoking weed, hanging with the guys — Oscar, Igor and Richie — and secretly hooking up with his childhood friend Kelsey. But when his mother starts dating a loudmouth firefighter named Ray, it sets off a chain of events that will force Scott to grapple with his grief and take his first tentative steps toward moving forward in life.",
+            "release_date": "2020-07-01"
+        },
+        {
+            "popularity": 31.897,
+            "vote_count": 579,
+            "video": false,
+            "poster_path": "/p9vCAVhDK375XyobVcKqzqzsUHE.jpg",
+            "id": 501907,
+            "adult": false,
+            "backdrop_path": "/w0tJot6O0UtLVBRIPAdg3dQ2oNO.jpg",
+            "original_language": "en",
+            "original_title": "A Beautiful Day in the Neighborhood",
+            "genre_ids": [
+                18
+            ],
+            "title": "A Beautiful Day in the Neighborhood",
+            "vote_average": 7.1,
+            "overview": "An award-winning cynical journalist, Lloyd Vogel, begrudgingly accepts an assignment to write an Esquire profile piece on the beloved television icon Fred Rogers. After his encounter with Rogers, Vogel's perspective on life is transformed.",
+            "release_date": "2019-09-07"
+        },
+        {
+            "popularity": 31.224,
+            "vote_count": 155,
+            "video": false,
+            "poster_path": "/MBiKqTsouYqAACLYNDadsjhhC0.jpg",
+            "id": 486589,
+            "adult": false,
+            "backdrop_path": "/bga3i5jcejBekr2FCGJga1fYCh.jpg",
+            "original_language": "en",
+            "original_title": "Red Shoes and the Seven Dwarfs",
+            "genre_ids": [
+                16,
+                10749,
+                10751
+            ],
+            "title": "Red Shoes and the Seven Dwarfs",
+            "vote_average": 6.6,
+            "overview": "Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy.",
+            "release_date": "2019-07-25"
+        },
+        {
+            "popularity": 30.981,
+            "vote_count": 1923,
+            "video": false,
+            "poster_path": "/kTQ3J8oTTKofAVLYnds2cHUz9KO.jpg",
+            "id": 522938,
+            "adult": false,
+            "backdrop_path": "/3IHqwENGxOb36Jgeot4XHs3BTxz.jpg",
+            "original_language": "en",
+            "original_title": "Rambo: Last Blood",
+            "genre_ids": [
+                28,
+                18,
+                53
+            ],
+            "title": "Rambo: Last Blood",
+            "vote_average": 6.3,
+            "overview": "After fighting his demons for decades, John Rambo now lives in peace on his family ranch in Arizona, but his rest is interrupted when Gabriela, the granddaughter of his housekeeper María, disappears after crossing the border into Mexico to meet her biological father. Rambo, who has become a true father figure for Gabriela over the years, undertakes a desperate and dangerous journey to find her.",
+            "release_date": "2019-09-19"
+        },
+        {
+            "popularity": 30.785,
+            "vote_count": 95,
+            "video": false,
+            "poster_path": "/fOvqEunubL3wPskvtk2Ficfl0pH.jpg",
+            "id": 451184,
+            "adult": false,
+            "backdrop_path": "/72r4uAQGsa8KEv0DB2TpSu31lEB.jpg",
+            "original_language": "en",
+            "original_title": "Wasp Network",
+            "genre_ids": [
+                18,
+                36,
+                53
+            ],
+            "title": "Wasp Network",
+            "vote_average": 6.4,
+            "overview": "Havana, Cuba, 1990. René González, an airplane pilot, unexpectedly flees the country, leaving behind his wife Olga and his daughter Irma, and begins a new life in Miami, where he becomes a member of an anti-Castro organization.",
+            "release_date": "2020-01-29"
+        },
+        {
+            "popularity": 28.957,
+            "vote_count": 455,
+            "video": false,
+            "poster_path": "/myf3qzpeN0JbuFRPwSpJcz7rmAT.jpg",
+            "id": 458305,
+            "adult": false,
+            "backdrop_path": "/jZ4YdDCnfK4cO13do9J4JaT8d2O.jpg",
+            "original_language": "en",
+            "original_title": "Vivarium",
+            "genre_ids": [
+                27,
+                878,
+                53
+            ],
+            "title": "Vivarium",
+            "vote_average": 5.9,
+            "overview": "A young woman and her fiancé are in search of the perfect starter home. After following a mysterious real estate agent to a new housing development, the couple finds themselves trapped in a maze of identical houses and forced to raise an otherworldly child.",
+            "release_date": "2019-07-12"
+        },
+        {
+            "popularity": 28.681,
+            "vote_count": 485,
+            "video": false,
+            "poster_path": "/tIpGQ9uuII7QVFF0GHCFTJFfXve.jpg",
+            "id": 555974,
+            "adult": false,
+            "backdrop_path": "/rpGYHowXtjw37UxdwO1ZcK5E8IN.jpg",
+            "original_language": "en",
+            "original_title": "Brahms: The Boy II",
+            "genre_ids": [
+                27,
+                9648,
+                53
+            ],
+            "title": "Brahms: The Boy II",
+            "vote_average": 6.3,
+            "overview": "After a family moves into the Heelshire Mansion, their young son soon makes friends with a life-like doll called Brahms.",
+            "release_date": "2020-02-20"
+        },
+        {
+            "popularity": 28.309,
+            "vote_count": 592,
+            "video": false,
+            "poster_path": "/hJ6YEbrjFvToa5c7IiUqILoB6Je.jpg",
+            "id": 552178,
+            "adult": false,
+            "backdrop_path": "/4ZSlTfkHtgTTupCaLbseXQQzZha.jpg",
+            "original_language": "en",
+            "original_title": "Dark Waters",
+            "genre_ids": [
+                18,
+                53
+            ],
+            "title": "Dark Waters",
+            "vote_average": 7.4,
+            "overview": "A tenacious attorney uncovers a dark secret that connects a growing number of unexplained deaths to one of the world's largest corporations. In the process, he risks everything — his future, his family, and his own life — to expose the truth.",
+            "release_date": "2019-11-22"
+        }
+    ],
+    "page": 1,
+    "total_results": 575,
+    "dates": {
+        "maximum": "2020-07-05",
+        "minimum": "2020-05-18"
+    },
+    "total_pages": 29
+}
+

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E248BEC16AE70DDC0E9C6EA /* Pods_FlickNite_FlickNiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AB8C79EC9CA17196F1526F /* Pods_FlickNite_FlickNiteUITests.framework */; };
 		680396122E028F443EC6C088 /* Pods_FlickNiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C299C6A521DF8CF5692C2DB2 /* Pods_FlickNiteTests.framework */; };
 		BF5C2B469EF1EC8461727AB5 /* Pods_FlickNite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510DF95009E1D15E301F057C /* Pods_FlickNite.framework */; };
 		E147F51424901DF00034DC77 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147F51324901DF00034DC77 /* APIEndpoint.swift */; };
@@ -24,6 +23,8 @@
 		E1E594D8248172160095143E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594D7248172160095143E /* RootViewController.swift */; };
 		E1E594DB248173190095143E /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DA248173190095143E /* MoviesCoordinator.swift */; };
 		E1E594DD2481737C0095143E /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E594DC2481737C0095143E /* FavoritesCoordinator.swift */; };
+		E1EC978C24B2AF13007440E1 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC978B24B2AF13007440E1 /* XCTestCase.swift */; };
+		E1EC97AE24B52F33007440E1 /* now_palaying_movies_200.json in Resources */ = {isa = PBXBuildFile; fileRef = E1EC97AD24B52F33007440E1 /* now_palaying_movies_200.json */; };
 		E1F0A61424A44EDE005F9AAD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0A61324A44EDE005F9AAD /* Video.swift */; };
 		E1F0A61924A654F1005F9AAD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0A61824A654F1005F9AAD /* Strings.swift */; };
 		E1F0A61D24A6601C005F9AAD /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0A61C24A6601C005F9AAD /* MovieDetailViewModel.swift */; };
@@ -56,13 +57,6 @@
 			remoteGlobalIDString = E1E59454248008630095143E;
 			remoteInfo = FlickNite;
 		};
-		E1E59477248008660095143E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1E5944D248008630095143E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1E59454248008630095143E;
-			remoteInfo = FlickNite;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -83,8 +77,6 @@
 		E1E59466248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E5946B248008660095143E /* FlickNiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickNiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E59471248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E59476248008660095143E /* FlickNiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickNiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1E5947C248008660095143E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E594B02480609D0095143E /* MoviesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewController.swift; sourceTree = "<group>"; };
 		E1E594B3248061430095143E /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		E1E594BB2480A87D0095143E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -94,6 +86,8 @@
 		E1E594D7248172160095143E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E1E594DA248173190095143E /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
 		E1E594DC2481737C0095143E /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		E1EC978B24B2AF13007440E1 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		E1EC97AD24B52F33007440E1 /* now_palaying_movies_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = now_palaying_movies_200.json; sourceTree = "<group>"; };
 		E1F0A61324A44EDE005F9AAD /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		E1F0A61824A654F1005F9AAD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		E1F0A61C24A6601C005F9AAD /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
@@ -136,14 +130,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1E59473248008660095143E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E248BEC16AE70DDC0E9C6EA /* Pods_FlickNite_FlickNiteUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -171,7 +157,6 @@
 			children = (
 				E1E59457248008630095143E /* FlickNite */,
 				E1E5946E248008660095143E /* FlickNiteTests */,
-				E1E59479248008660095143E /* FlickNiteUITests */,
 				E1E59456248008630095143E /* Products */,
 				EA8D24CC51E49DBBC4A33911 /* Pods */,
 				64D296D8A1EF8BB343A0D543 /* Frameworks */,
@@ -183,7 +168,6 @@
 			children = (
 				E1E59455248008630095143E /* FlickNite.app */,
 				E1E5946B248008660095143E /* FlickNiteTests.xctest */,
-				E1E59476248008660095143E /* FlickNiteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,17 +197,12 @@
 		E1E5946E248008660095143E /* FlickNiteTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1EC978A24B2AEE9007440E1 /* Stubs */,
+				E1EC978924B2AEBB007440E1 /* Extensions */,
+				E1EC978824B2AEB0007440E1 /* Test Cases */,
 				E1E5948D2480092A0095143E /* Supporting Files */,
 			);
 			path = FlickNiteTests;
-			sourceTree = "<group>";
-		};
-		E1E59479248008660095143E /* FlickNiteUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E1E5948E248009340095143E /* Supporting Files */,
-			);
-			path = FlickNiteUITests;
 			sourceTree = "<group>";
 		};
 		E1E59488248008770095143E /* Appp Delegate */ = {
@@ -264,14 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				E1E59471248008660095143E /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E1E5948E248009340095143E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E1E5947C248008660095143E /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -371,6 +342,29 @@
 				E1FF4AED2485F4E100FF2FD2 /* UICollectionViewCell+Helpers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1EC978824B2AEB0007440E1 /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
+		E1EC978924B2AEBB007440E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1EC978B24B2AF13007440E1 /* XCTestCase.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1EC978A24B2AEE9007440E1 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				E1EC97AD24B52F33007440E1 /* now_palaying_movies_200.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		E1F0A61724A654D8005F9AAD /* Helpers */ = {
@@ -581,26 +575,6 @@
 			productReference = E1E5946B248008660095143E /* FlickNiteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E1E59475248008660095143E /* FlickNiteUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1E59485248008660095143E /* Build configuration list for PBXNativeTarget "FlickNiteUITests" */;
-			buildPhases = (
-				A908659C9F17F4FCA6BD5BDA /* [CP] Check Pods Manifest.lock */,
-				E1E59472248008660095143E /* Sources */,
-				E1E59473248008660095143E /* Frameworks */,
-				E1E59474248008660095143E /* Resources */,
-				41F8F4C7DEA77C9DFAE6295C /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E1E59478248008660095143E /* PBXTargetDependency */,
-			);
-			name = FlickNiteUITests;
-			productName = FlickNiteUITests;
-			productReference = E1E59476248008660095143E /* FlickNiteUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -616,10 +590,7 @@
 					};
 					E1E5946A248008660095143E = {
 						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = E1E59454248008630095143E;
-					};
-					E1E59475248008660095143E = {
-						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1150;
 						TestTargetID = E1E59454248008630095143E;
 					};
 				};
@@ -639,7 +610,6 @@
 			targets = (
 				E1E59454248008630095143E /* FlickNite */,
 				E1E5946A248008660095143E /* FlickNiteTests */,
-				E1E59475248008660095143E /* FlickNiteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -661,36 +631,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1E59474248008660095143E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E1EC97AE24B52F33007440E1 /* now_palaying_movies_200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41F8F4C7DEA77C9DFAE6295C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlickNite-FlickNiteUITests/Pods-FlickNite-FlickNiteUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		78441E395CE350F012FD998E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -729,28 +676,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FlickNiteTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A908659C9F17F4FCA6BD5BDA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlickNite-FlickNiteUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -819,13 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1E59472248008660095143E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E1EC978C24B2AF13007440E1 /* XCTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,11 +755,6 @@
 			isa = PBXTargetDependency;
 			target = E1E59454248008630095143E /* FlickNite */;
 			targetProxy = E1E5946C248008660095143E /* PBXContainerItemProxy */;
-		};
-		E1E59478248008660095143E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1E59454248008630095143E /* FlickNite */;
-			targetProxy = E1E59477248008660095143E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1003,9 +917,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B426D3XC5Q;
-				INFOPLIST_FILE = FlickNiteTests/Info.plist;
+				INFOPLIST_FILE = "FlickNiteTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1014,6 +929,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CococastsDemo.FlickNiteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickNite.app/FlickNite";
@@ -1026,9 +942,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B426D3XC5Q;
-				INFOPLIST_FILE = FlickNiteTests/Info.plist;
+				INFOPLIST_FILE = "FlickNiteTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1040,48 +957,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickNite.app/FlickNite";
-			};
-			name = Release;
-		};
-		E1E59486248008660095143E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EA9DC2B95FB57782EFE2B86 /* Pods-FlickNite-FlickNiteUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B426D3XC5Q;
-				INFOPLIST_FILE = FlickNiteUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CococastsDemo.FlickNiteUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlickNite;
-			};
-			name = Debug;
-		};
-		E1E59487248008660095143E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C35159E8CDBA0FBB1E54335 /* Pods-FlickNite-FlickNiteUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B426D3XC5Q;
-				INFOPLIST_FILE = FlickNiteUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CococastsDemo.FlickNiteUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlickNite;
 			};
 			name = Release;
 		};
@@ -1111,15 +986,6 @@
 			buildConfigurations = (
 				E1E59483248008660095143E /* Debug */,
 				E1E59484248008660095143E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E1E59485248008660095143E /* Build configuration list for PBXNativeTarget "FlickNiteUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1E59486248008660095143E /* Debug */,
-				E1E59487248008660095143E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
